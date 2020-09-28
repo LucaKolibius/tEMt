@@ -1,0 +1,307 @@
+NetCom Log File Opened - File Name:  MatlabNetComLogfile.txt
+Time Opened: (mm/dd/yyyy): 10/17/2016 At Time: 18:17:42
+NetCom Version 3.0.1
+
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:42 - NetworkNodeClient::ConnectToServer - NetCom client connected to server 10.2.2.30 on port 26200.
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:43 - NetworkNodeClient::DisconnectFromServer - NetCom client has been disconnected from its server.
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:43 - NetworkNodeClient::ConnectToServer - NetCom client connected to server 10.2.2.30 on port 26202.
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:47 - NodeConnectionClient::AddStreamObject - Object CSC_R1 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:48 - NodeConnectionClient::AddStreamObject - Object CSC_R2 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:48 - NodeConnectionClient::AddStreamObject - Object CSC_R3 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:48 - NodeConnectionClient::AddStreamObject - Object CSC_R4 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:48 - NodeConnectionClient::AddStreamObject - Object CSC_R5 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:48 - NodeConnectionClient::AddStreamObject - Object CSC_R6 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:49 - NodeConnectionClient::AddStreamObject - Object CSC_R7 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:49 - NodeConnectionClient::AddStreamObject - Object CSC_R8 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:49 - NodeConnectionClient::AddStreamObject - Object CSC_R9 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:49 - NodeConnectionClient::AddStreamObject - Object CSC_R10 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:49 - NodeConnectionClient::AddStreamObject - Object CSC_R11 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:50 - NodeConnectionClient::AddStreamObject - Object CSC_R12 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:50 - NodeConnectionClient::AddStreamObject - Object CSC_R13 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:50 - NodeConnectionClient::AddStreamObject - Object CSC_R14 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:50 - NodeConnectionClient::AddStreamObject - Object CSC_R15 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:50 - NodeConnectionClient::AddStreamObject - Object CSC_R16 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:51 - NodeConnectionClient::AddStreamObject - Object CSC_R17 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:51 - NodeConnectionClient::AddStreamObject - Object CSC_R18 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:51 - NodeConnectionClient::AddStreamObject - Object CSC_R19 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:51 - NodeConnectionClient::AddStreamObject - Object CSC_R20 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:51 - NodeConnectionClient::AddStreamObject - Object CSC_R21 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:52 - NodeConnectionClient::AddStreamObject - Object CSC_R22 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:52 - NodeConnectionClient::AddStreamObject - Object CSC_R23 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:52 - NodeConnectionClient::AddStreamObject - Object CSC_R24 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:52 - NodeConnectionClient::AddStreamObject - Object CSC_L1 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:52 - NodeConnectionClient::AddStreamObject - Object CSC_L2 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:53 - NodeConnectionClient::AddStreamObject - Object CSC_L3 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:53 - NodeConnectionClient::AddStreamObject - Object CSC_L4 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:53 - NodeConnectionClient::AddStreamObject - Object CSC_L5 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:53 - NodeConnectionClient::AddStreamObject - Object CSC_L6 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:53 - NodeConnectionClient::AddStreamObject - Object CSC_L7 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:54 - NodeConnectionClient::AddStreamObject - Object CSC_L8 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:54 - NodeConnectionClient::AddStreamObject - Object CSC_L9 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:54 - NodeConnectionClient::AddStreamObject - Object CSC_L10 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:54 - NodeConnectionClient::AddStreamObject - Object CSC_L11 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:54 - NodeConnectionClient::AddStreamObject - Object CSC_L12 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:55 - NodeConnectionClient::AddStreamObject - Object CSC_L13 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:55 - NodeConnectionClient::AddStreamObject - Object CSC_L14 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:55 - NodeConnectionClient::AddStreamObject - Object CSC_L15 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:55 - NodeConnectionClient::AddStreamObject - Object CSC_L16 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:55 - NodeConnectionClient::AddStreamObject - Object CSC_L17 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:56 - NodeConnectionClient::AddStreamObject - Object CSC_L18 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:56 - NodeConnectionClient::AddStreamObject - Object CSC_L19 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:56 - NodeConnectionClient::AddStreamObject - Object CSC_L20 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:56 - NodeConnectionClient::AddStreamObject - Object CSC_L21 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:56 - NodeConnectionClient::AddStreamObject - Object CSC_L22 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:57 - NodeConnectionClient::AddStreamObject - Object CSC_L23 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:57 - NodeConnectionClient::AddStreamObject - Object CSC_L24 has been added to our stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:57 - NodeConnectionClient::AddStreamObject - Object S_R1 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:57 - NodeConnectionClient::AddStreamObject - Object S_R2 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:57 - NodeConnectionClient::AddStreamObject - Object S_R3 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:58 - NodeConnectionClient::AddStreamObject - Object S_R4 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:58 - NodeConnectionClient::AddStreamObject - Object S_R5 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:58 - NodeConnectionClient::AddStreamObject - Object S_R6 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:58 - NodeConnectionClient::AddStreamObject - Object S_R7 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:58 - NodeConnectionClient::AddStreamObject - Object S_R8 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:59 - NodeConnectionClient::AddStreamObject - Object S_R9 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:59 - NodeConnectionClient::AddStreamObject - Object S_R10 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:59 - NodeConnectionClient::AddStreamObject - Object S_R11 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:59 - NodeConnectionClient::AddStreamObject - Object S_R12 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:17:59 - NodeConnectionClient::AddStreamObject - Object S_R13 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:00 - NodeConnectionClient::AddStreamObject - Object S_R14 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:00 - NodeConnectionClient::AddStreamObject - Object S_R15 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:00 - NodeConnectionClient::AddStreamObject - Object S_R16 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:00 - NodeConnectionClient::AddStreamObject - Object S_R17 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:00 - NodeConnectionClient::AddStreamObject - Object S_R18 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:01 - NodeConnectionClient::AddStreamObject - Object S_R19 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:01 - NodeConnectionClient::AddStreamObject - Object S_R20 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:01 - NodeConnectionClient::AddStreamObject - Object S_R21 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:01 - NodeConnectionClient::AddStreamObject - Object S_R22 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:01 - NodeConnectionClient::AddStreamObject - Object S_R23 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:02 - NodeConnectionClient::AddStreamObject - Object S_R24 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:02 - NodeConnectionClient::AddStreamObject - Object S_L1 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:02 - NodeConnectionClient::AddStreamObject - Object S_L2 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:02 - NodeConnectionClient::AddStreamObject - Object S_L3 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:02 - NodeConnectionClient::AddStreamObject - Object S_L4 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:03 - NodeConnectionClient::AddStreamObject - Object S_L5 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:03 - NodeConnectionClient::AddStreamObject - Object S_L6 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:03 - NodeConnectionClient::AddStreamObject - Object S_L7 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:03 - NodeConnectionClient::AddStreamObject - Object S_L8 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:03 - NodeConnectionClient::AddStreamObject - Object S_L9 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:04 - NodeConnectionClient::AddStreamObject - Object S_L10 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:04 - NodeConnectionClient::AddStreamObject - Object S_L11 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:04 - NodeConnectionClient::AddStreamObject - Object S_L12 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:04 - NodeConnectionClient::AddStreamObject - Object S_L13 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:04 - NodeConnectionClient::AddStreamObject - Object S_L14 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:05 - NodeConnectionClient::AddStreamObject - Object S_L15 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:05 - NodeConnectionClient::AddStreamObject - Object S_L16 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:05 - NodeConnectionClient::AddStreamObject - Object S_L17 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:05 - NodeConnectionClient::AddStreamObject - Object S_L18 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:05 - NodeConnectionClient::AddStreamObject - Object S_L19 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:06 - NodeConnectionClient::AddStreamObject - Object S_L20 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:06 - NodeConnectionClient::AddStreamObject - Object S_L21 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:06 - NodeConnectionClient::AddStreamObject - Object S_L22 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:06 - NodeConnectionClient::AddStreamObject - Object S_L23 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:06 - NodeConnectionClient::AddStreamObject - Object S_L24 has been added to our stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:18:07 - NodeConnectionClient::AddStreamObject - Object EVENTS has been added to our stream list. Stream Type: Event
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:03 - NodeConnectionClient::RemoveStreamObject - Object CSC_R1 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:03 - NodeConnectionClient::RemoveStreamObject - Object CSC_R1 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:03 - NodeConnectionClient::RemoveStreamObject - Object CSC_R2 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:03 - NodeConnectionClient::RemoveStreamObject - Object CSC_R2 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:03 - NodeConnectionClient::RemoveStreamObject - Object CSC_R3 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:03 - NodeConnectionClient::RemoveStreamObject - Object CSC_R3 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:03 - NodeConnectionClient::RemoveStreamObject - Object CSC_R4 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:03 - NodeConnectionClient::RemoveStreamObject - Object CSC_R4 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:03 - NodeConnectionClient::RemoveStreamObject - Object CSC_R5 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:03 - NodeConnectionClient::RemoveStreamObject - Object CSC_R5 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:04 - NodeConnectionClient::RemoveStreamObject - Object CSC_R6 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:04 - NodeConnectionClient::RemoveStreamObject - Object CSC_R6 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:04 - NodeConnectionClient::RemoveStreamObject - Object CSC_R7 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:04 - NodeConnectionClient::RemoveStreamObject - Object CSC_R7 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:04 - NodeConnectionClient::RemoveStreamObject - Object CSC_R8 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:04 - NodeConnectionClient::RemoveStreamObject - Object CSC_R8 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:04 - NodeConnectionClient::RemoveStreamObject - Object CSC_R9 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:04 - NodeConnectionClient::RemoveStreamObject - Object CSC_R9 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:04 - NodeConnectionClient::RemoveStreamObject - Object CSC_R10 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:04 - NodeConnectionClient::RemoveStreamObject - Object CSC_R10 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:05 - NodeConnectionClient::RemoveStreamObject - Object CSC_R11 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:05 - NodeConnectionClient::RemoveStreamObject - Object CSC_R11 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:05 - NodeConnectionClient::RemoveStreamObject - Object CSC_R12 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:05 - NodeConnectionClient::RemoveStreamObject - Object CSC_R12 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:05 - NodeConnectionClient::RemoveStreamObject - Object CSC_R13 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:05 - NodeConnectionClient::RemoveStreamObject - Object CSC_R13 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:05 - NodeConnectionClient::RemoveStreamObject - Object CSC_R14 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:05 - NodeConnectionClient::RemoveStreamObject - Object CSC_R14 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:05 - NodeConnectionClient::RemoveStreamObject - Object CSC_R15 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:05 - NodeConnectionClient::RemoveStreamObject - Object CSC_R15 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:06 - NodeConnectionClient::RemoveStreamObject - Object CSC_R16 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:06 - NodeConnectionClient::RemoveStreamObject - Object CSC_R16 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:06 - NodeConnectionClient::RemoveStreamObject - Object CSC_R17 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:06 - NodeConnectionClient::RemoveStreamObject - Object CSC_R17 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:06 - NodeConnectionClient::RemoveStreamObject - Object CSC_R18 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:06 - NodeConnectionClient::RemoveStreamObject - Object CSC_R18 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:06 - NodeConnectionClient::RemoveStreamObject - Object CSC_R19 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:06 - NodeConnectionClient::RemoveStreamObject - Object CSC_R19 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:06 - NodeConnectionClient::RemoveStreamObject - Object CSC_R20 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:06 - NodeConnectionClient::RemoveStreamObject - Object CSC_R20 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:07 - NodeConnectionClient::RemoveStreamObject - Object CSC_R21 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:07 - NodeConnectionClient::RemoveStreamObject - Object CSC_R21 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:07 - NodeConnectionClient::RemoveStreamObject - Object CSC_R22 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:07 - NodeConnectionClient::RemoveStreamObject - Object CSC_R22 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:07 - NodeConnectionClient::RemoveStreamObject - Object CSC_R23 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:07 - NodeConnectionClient::RemoveStreamObject - Object CSC_R23 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:07 - NodeConnectionClient::RemoveStreamObject - Object CSC_R24 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:07 - NodeConnectionClient::RemoveStreamObject - Object CSC_R24 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:07 - NodeConnectionClient::RemoveStreamObject - Object CSC_L1 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:07 - NodeConnectionClient::RemoveStreamObject - Object CSC_L1 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:08 - NodeConnectionClient::RemoveStreamObject - Object CSC_L2 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:08 - NodeConnectionClient::RemoveStreamObject - Object CSC_L2 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:08 - NodeConnectionClient::RemoveStreamObject - Object CSC_L3 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:08 - NodeConnectionClient::RemoveStreamObject - Object CSC_L3 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:08 - NodeConnectionClient::RemoveStreamObject - Object CSC_L4 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:08 - NodeConnectionClient::RemoveStreamObject - Object CSC_L4 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:08 - NodeConnectionClient::RemoveStreamObject - Object CSC_L5 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:08 - NodeConnectionClient::RemoveStreamObject - Object CSC_L5 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:08 - NodeConnectionClient::RemoveStreamObject - Object CSC_L6 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:08 - NodeConnectionClient::RemoveStreamObject - Object CSC_L6 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:09 - NodeConnectionClient::RemoveStreamObject - Object CSC_L7 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:09 - NodeConnectionClient::RemoveStreamObject - Object CSC_L7 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:09 - NodeConnectionClient::RemoveStreamObject - Object CSC_L8 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:09 - NodeConnectionClient::RemoveStreamObject - Object CSC_L8 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:09 - NodeConnectionClient::RemoveStreamObject - Object CSC_L9 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:09 - NodeConnectionClient::RemoveStreamObject - Object CSC_L9 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:09 - NodeConnectionClient::RemoveStreamObject - Object CSC_L10 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:09 - NodeConnectionClient::RemoveStreamObject - Object CSC_L10 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:09 - NodeConnectionClient::RemoveStreamObject - Object CSC_L11 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:09 - NodeConnectionClient::RemoveStreamObject - Object CSC_L11 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:10 - NodeConnectionClient::RemoveStreamObject - Object CSC_L12 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:10 - NodeConnectionClient::RemoveStreamObject - Object CSC_L12 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:10 - NodeConnectionClient::RemoveStreamObject - Object CSC_L13 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:10 - NodeConnectionClient::RemoveStreamObject - Object CSC_L13 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:10 - NodeConnectionClient::RemoveStreamObject - Object CSC_L14 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:10 - NodeConnectionClient::RemoveStreamObject - Object CSC_L14 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:10 - NodeConnectionClient::RemoveStreamObject - Object CSC_L15 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:10 - NodeConnectionClient::RemoveStreamObject - Object CSC_L15 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:10 - NodeConnectionClient::RemoveStreamObject - Object CSC_L16 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:10 - NodeConnectionClient::RemoveStreamObject - Object CSC_L16 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:11 - NodeConnectionClient::RemoveStreamObject - Object CSC_L17 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:11 - NodeConnectionClient::RemoveStreamObject - Object CSC_L17 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:11 - NodeConnectionClient::RemoveStreamObject - Object CSC_L18 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:11 - NodeConnectionClient::RemoveStreamObject - Object CSC_L18 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:11 - NodeConnectionClient::RemoveStreamObject - Object CSC_L19 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:11 - NodeConnectionClient::RemoveStreamObject - Object CSC_L19 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:11 - NodeConnectionClient::RemoveStreamObject - Object CSC_L20 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:11 - NodeConnectionClient::RemoveStreamObject - Object CSC_L20 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:11 - NodeConnectionClient::RemoveStreamObject - Object CSC_L21 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:11 - NodeConnectionClient::RemoveStreamObject - Object CSC_L21 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:12 - NodeConnectionClient::RemoveStreamObject - Object CSC_L22 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:12 - NodeConnectionClient::RemoveStreamObject - Object CSC_L22 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:12 - NodeConnectionClient::RemoveStreamObject - Object CSC_L23 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:12 - NodeConnectionClient::RemoveStreamObject - Object CSC_L23 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:12 - NodeConnectionClient::RemoveStreamObject - Object CSC_L24 stream reference count has been decremented to 0. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:12 - NodeConnectionClient::RemoveStreamObject - Object CSC_L24 has been removed from the stream list. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:12 - NodeConnectionClient::RemoveStreamObject - Object S_R1 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:12 - NodeConnectionClient::RemoveStreamObject - Object S_R1 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:12 - NodeConnectionClient::RemoveStreamObject - Object S_R2 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:12 - NodeConnectionClient::RemoveStreamObject - Object S_R2 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:13 - NodeConnectionClient::RemoveStreamObject - Object S_R3 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:13 - NodeConnectionClient::RemoveStreamObject - Object S_R3 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:13 - NodeConnectionClient::RemoveStreamObject - Object S_R4 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:13 - NodeConnectionClient::RemoveStreamObject - Object S_R4 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:13 - NodeConnectionClient::RemoveStreamObject - Object S_R5 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:13 - NodeConnectionClient::RemoveStreamObject - Object S_R5 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:13 - NodeConnectionClient::RemoveStreamObject - Object S_R6 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:13 - NodeConnectionClient::RemoveStreamObject - Object S_R6 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:13 - NodeConnectionClient::RemoveStreamObject - Object S_R7 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:13 - NodeConnectionClient::RemoveStreamObject - Object S_R7 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:14 - NodeConnectionClient::RemoveStreamObject - Object S_R8 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:14 - NodeConnectionClient::RemoveStreamObject - Object S_R8 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:14 - NodeConnectionClient::RemoveStreamObject - Object S_R9 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:14 - NodeConnectionClient::RemoveStreamObject - Object S_R9 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:14 - NodeConnectionClient::RemoveStreamObject - Object S_R10 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:14 - NodeConnectionClient::RemoveStreamObject - Object S_R10 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:14 - NodeConnectionClient::RemoveStreamObject - Object S_R11 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:14 - NodeConnectionClient::RemoveStreamObject - Object S_R11 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:14 - NodeConnectionClient::RemoveStreamObject - Object S_R12 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:14 - NodeConnectionClient::RemoveStreamObject - Object S_R12 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:15 - NodeConnectionClient::RemoveStreamObject - Object S_R13 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:15 - NodeConnectionClient::RemoveStreamObject - Object S_R13 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:15 - NodeConnectionClient::RemoveStreamObject - Object S_R14 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:15 - NodeConnectionClient::RemoveStreamObject - Object S_R14 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:15 - NodeConnectionClient::RemoveStreamObject - Object S_R15 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:15 - NodeConnectionClient::RemoveStreamObject - Object S_R15 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:15 - NodeConnectionClient::RemoveStreamObject - Object S_R16 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:15 - NodeConnectionClient::RemoveStreamObject - Object S_R16 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:15 - NodeConnectionClient::RemoveStreamObject - Object S_R17 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:15 - NodeConnectionClient::RemoveStreamObject - Object S_R17 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:16 - NodeConnectionClient::RemoveStreamObject - Object S_R18 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:16 - NodeConnectionClient::RemoveStreamObject - Object S_R18 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:16 - NodeConnectionClient::RemoveStreamObject - Object S_R19 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:16 - NodeConnectionClient::RemoveStreamObject - Object S_R19 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:16 - NodeConnectionClient::RemoveStreamObject - Object S_R20 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:16 - NodeConnectionClient::RemoveStreamObject - Object S_R20 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:16 - NodeConnectionClient::RemoveStreamObject - Object S_R21 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:16 - NodeConnectionClient::RemoveStreamObject - Object S_R21 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:16 - NodeConnectionClient::RemoveStreamObject - Object S_R22 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:16 - NodeConnectionClient::RemoveStreamObject - Object S_R22 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:17 - NodeConnectionClient::RemoveStreamObject - Object S_R23 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:17 - NodeConnectionClient::RemoveStreamObject - Object S_R23 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:17 - NodeConnectionClient::RemoveStreamObject - Object S_R24 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:17 - NodeConnectionClient::RemoveStreamObject - Object S_R24 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:17 - NodeConnectionClient::RemoveStreamObject - Object S_L1 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:17 - NodeConnectionClient::RemoveStreamObject - Object S_L1 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:17 - NodeConnectionClient::RemoveStreamObject - Object S_L2 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:17 - NodeConnectionClient::RemoveStreamObject - Object S_L2 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:17 - NodeConnectionClient::RemoveStreamObject - Object S_L3 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:17 - NodeConnectionClient::RemoveStreamObject - Object S_L3 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:18 - NodeConnectionClient::RemoveStreamObject - Object S_L4 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:18 - NodeConnectionClient::RemoveStreamObject - Object S_L4 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:18 - NodeConnectionClient::RemoveStreamObject - Object S_L5 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:18 - NodeConnectionClient::RemoveStreamObject - Object S_L5 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:18 - NodeConnectionClient::RemoveStreamObject - Object S_L6 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:18 - NodeConnectionClient::RemoveStreamObject - Object S_L6 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:18 - NodeConnectionClient::RemoveStreamObject - Object S_L7 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:18 - NodeConnectionClient::RemoveStreamObject - Object S_L7 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:18 - NodeConnectionClient::RemoveStreamObject - Object S_L8 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:18 - NodeConnectionClient::RemoveStreamObject - Object S_L8 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:19 - NodeConnectionClient::RemoveStreamObject - Object S_L9 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:19 - NodeConnectionClient::RemoveStreamObject - Object S_L9 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:19 - NodeConnectionClient::RemoveStreamObject - Object S_L10 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:19 - NodeConnectionClient::RemoveStreamObject - Object S_L10 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:19 - NodeConnectionClient::RemoveStreamObject - Object S_L11 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:19 - NodeConnectionClient::RemoveStreamObject - Object S_L11 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:19 - NodeConnectionClient::RemoveStreamObject - Object S_L12 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:19 - NodeConnectionClient::RemoveStreamObject - Object S_L12 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:19 - NodeConnectionClient::RemoveStreamObject - Object S_L13 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:19 - NodeConnectionClient::RemoveStreamObject - Object S_L13 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:20 - NodeConnectionClient::RemoveStreamObject - Object S_L14 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:20 - NodeConnectionClient::RemoveStreamObject - Object S_L14 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:20 - NodeConnectionClient::RemoveStreamObject - Object S_L15 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:20 - NodeConnectionClient::RemoveStreamObject - Object S_L15 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:20 - NodeConnectionClient::RemoveStreamObject - Object S_L16 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:20 - NodeConnectionClient::RemoveStreamObject - Object S_L16 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:20 - NodeConnectionClient::RemoveStreamObject - Object S_L17 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:20 - NodeConnectionClient::RemoveStreamObject - Object S_L17 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:20 - NodeConnectionClient::RemoveStreamObject - Object S_L18 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:20 - NodeConnectionClient::RemoveStreamObject - Object S_L18 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:21 - NodeConnectionClient::RemoveStreamObject - Object S_L19 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:21 - NodeConnectionClient::RemoveStreamObject - Object S_L19 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:21 - NodeConnectionClient::RemoveStreamObject - Object S_L20 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:21 - NodeConnectionClient::RemoveStreamObject - Object S_L20 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:21 - NodeConnectionClient::RemoveStreamObject - Object S_L21 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:21 - NodeConnectionClient::RemoveStreamObject - Object S_L21 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:21 - NodeConnectionClient::RemoveStreamObject - Object S_L22 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:21 - NodeConnectionClient::RemoveStreamObject - Object S_L22 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:21 - NodeConnectionClient::RemoveStreamObject - Object S_L23 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:21 - NodeConnectionClient::RemoveStreamObject - Object S_L23 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:22 - NodeConnectionClient::RemoveStreamObject - Object S_L24 stream reference count has been decremented to 0. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:22 - NodeConnectionClient::RemoveStreamObject - Object S_L24 has been removed from the stream list. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:22 - NodeConnectionClient::RemoveStreamObject - Object EVENTS stream reference count has been decremented to 0. Stream Type: Event
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:22 - NodeConnectionClient::RemoveStreamObject - Object EVENTS has been removed from the stream list. Stream Type: Event
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:22 - NodeConnectionClient::CloseServerStream - Call to wait for thread completion was successful for SingleElectrode stream processing thread. Stream Type: SingleElectrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:23 - NodeConnectionClient::CloseServerStream - Call to wait for thread completion was successful for Stereotrode stream processing thread. Stream Type: Stereotrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:23 - NodeConnectionClient::CloseServerStream - Call to wait for thread completion was successful for Tetrode stream processing thread. Stream Type: Tetrode
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:24 - NodeConnectionClient::CloseServerStream - Call to wait for thread completion was successful for CSC stream processing thread. Stream Type: CSC
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:24 - NodeConnectionClient::CloseServerStream - Call to wait for thread completion was successful for Video stream processing thread. Stream Type: Video
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:25 - NodeConnectionClient::CloseServerStream - Call to wait for thread completion was successful for Event stream processing thread. Stream Type: Event
+-* NOTICE  *- (mm/dd/yyyy): 10/17/2016 At Time: 18:24:25 - NetworkNodeClient::DisconnectFromServer - NetCom client has been disconnected from its server.
+Log File Closed - End of File
+

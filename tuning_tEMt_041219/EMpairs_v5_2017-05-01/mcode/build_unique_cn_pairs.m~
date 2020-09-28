@@ -1,0 +1,104 @@
+function [stim_mat] = build_unique_cn_pairs(ID,concept_n)
+
+ID = ID.id;
+%%
+%ID2 = cell(length(ID),1);
+idx = zeros(length(ID),1);
+for it = 1:length(ID)
+    
+    %ID2{it} = ID(it)(1:regexp(ID(it),'.jpg')-1);
+    idx(it) = it;
+    
+end;
+%%
+cc = zeros(length(idx),1);
+for it = 1:length(concept_n)
+    
+    chck = regexp(ID,concept_n{it});
+    
+    chck2 = zeros(length(chck),1);
+    for jt = 1:length(chck)
+        chck2(jt) = isempty(chck{jt});
+    end;
+    
+    ix = find(chck2 ==0);
+    cc(ix) = it+zeros(length(ix),1);
+    
+end;
+%%
+n = length(concept_n);
+
+cp = zeros(n*(n-1)/2+n,2);
+k = 0;
+
+x1 = 1;
+for it = 1:n
+    for jt = x1:n
+        k=k+1;
+        cp(k,:) = [it jt];
+        
+    end;
+    x1 = x1+1;
+end;
+%%
+samp = [idx cc];
+
+[c_idx] = find(samp(:,2)==0);
+[c_idx] = c_idx(randperm(length(c_idx)));
+
+trl = 0;
+seq = zeros(3,length(find(samp(:,2)~=0))/2);
+f1 = 0;
+while f1==0
+    for it = 1:size(cp,1)
+        
+        p = cp(it,:);
+        
+        sel = zeros(length(p),1);
+        ix = cell(length(p),1);
+        for jt = 1:length(p)
+            ix{jt} = find(samp(:,2) == p(jt));
+        end;
+        if isempty(ix{1})
+            f1=1;
+        else
+            ix{1} = ix{1}(randperm(length(ix{1})));
+            sel(1) = ix{1}(1);
+            
+            
+            
+            if (length(find(ismember(samp(:,2),cp(it,:)))) >=2)
+                f2 = 0;
+                while f2 ==0
+                    ix{2} = ix{2}(randperm(length(ix{2})));
+                    sel(2) = ix{2}(1);
+                    if sel(2) ~= sel(1)
+                        f2=1;
+                    end;
+                end;
+            end;
+            
+            
+            trl = trl+1;
+            %seq(1,trl) = c_idx(trl);
+            seq(2:3,trl) = samp(sel,1);
+            
+            samp(sel,:) = [];
+        end;
+    end;
+    
+end;
+%% sanity check
+x = seq(2:3,:);
+x = x(:);
+if (length(x) == length(unique(x))) ~= 1
+    error('non-unique event codes not permitted');
+end;
+%%
+for it = 1:length(c_idx)
+    seq(1,it) = c_idx(it);
+end;
+%%
+seq = seq(:,length(c));
+%%
+return;

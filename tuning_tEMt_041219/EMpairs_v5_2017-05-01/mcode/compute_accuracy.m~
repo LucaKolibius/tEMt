@@ -1,0 +1,30 @@
+function [perf]= compute_accuracy(CM)
+
+if ~any(isnan(CM))
+    P = zeros(size(CM,1),2);
+    for it = 1:size(CM,1)
+        
+        P(it,:) = ismember(CM(it,3:4),CM(it,1:2));
+        
+    end;
+    
+    C = 1/size(CM,2);
+    
+    P = (P-C)/(1-C);
+    P(sign(P)==-1) = 0;
+    
+    [H] = sum(P(:))/length(P(:));
+    [M] = 1-H;
+    %%
+    perf.CM = CM;
+    perf.P = P;
+    perf.H = H;
+    perf.M = M;
+else
+    %%
+    perf.CM = NaN(1,4);
+    perf.P = NaN(1,2);
+    perf.H = NaN(1,2);
+    perf.M = NaN;
+end;
+return;
