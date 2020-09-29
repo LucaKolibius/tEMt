@@ -8,9 +8,12 @@
 % revisions by FRO, 05/05/2017
 % implemented ttl/serial trigger versions by LDK, 31/10/19 (happy halloween)
 % adapted for tEMt by LDK, 04/12/19 (happy chrisis / crysler)
-function start_tEMt_tuning(trg, patientID, sesh, lang, prePost)
+
+function start_tEMt_tuning(trg, patientID, sesh, lang)
 close all
 sca
+
+prePost = 'post'; % so far no pre tuning allowed
 cd('C:\Experiments\tuning_tEMt_041219') % to make sure we are not in the EM folder anymore and have some old functions on the path
 
 if ~strcmp(trg,'debug')
@@ -20,7 +23,8 @@ end
 params.trg = trg;
 % params = [];
 basepath = [ 'C:\Experiments\tuning_tEMt_041219\EMpairs_v5_2017-05-01' ];
-addpath('C:\Experiments\tEMt_041219\commonFunctions')
+% addpath('C:\Experiments\tEMt_041219\commonFunctions')
+
 % never add filesep at end
 cd([basepath,filesep,'mcode']);
 
@@ -74,17 +78,17 @@ params.basepath = basepath;
 if ~strcmp(params.trg, 'debug') % not a practice run
     if strcmp(params.prePost, 'pre') % before the EM task we tune the whole session
         error('Pre Tuning not yet implemented. Simon says no.');
-            params.p2f = ['C:\Experiments\tuning_tEMt_041219\EMpairs_v5_2017-05-01\image_data\Tune\sesh',sesh, filesep];
+        params.p2f = ['C:\Experiments\tuning_tEMt_041219\EMpairs_v5_2017-05-01\image_data\Tune\sesh',sesh, filesep];
     elseif strcmp(params.prePost, 'post') % after the EM task we only look for tunings to the images that were shown before
         params.p2f = ['C:\Experiments\tuning_tEMt_041219\EMpairs_v5_2017-05-01\image_data\Tune\', patientID, filesep, 'sesh',sesh, '_postEM_',d, filesep];
     end
 elseif strcmp(params.trg, 'debug')
-        params.p2f = 'C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\image_data\EMtune\formatted_180-180\practice\';
-%     params.p2f = 'C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\image_data\EMtune\formatted_180-180\numbers\';
+    params.p2f = 'C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\image_data\EMtune\formatted_180-180\practice\';
+    %     params.p2f = 'C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\image_data\EMtune\formatted_180-180\numbers\';
 end
 
 %     saving path for the params and logfile
-params.p2log = [params.basepath,filesep,'log',filesep,'Tuning',filesep,patientID,filesep, 'Session_',sesh, filesep];
+params.p2log    = [params.basepath,filesep,'log',filesep,'Tuning',filesep,patientID,filesep, 'Session_',sesh, filesep];
 params.p2params = [params.basepath,filesep,'params',filesep,patientID,filesep, 'Session_',sesh, filesep];
 
 params.nreps = nreps;% number of reps per pic
@@ -161,3 +165,9 @@ end
 
 %%j.l#
 Concept_tuning(params);
+
+%% REMOVE ALL PATHS FROM TUNING
+rmpath(genpath(basepath));
+
+end % END OF FUNCTION
+

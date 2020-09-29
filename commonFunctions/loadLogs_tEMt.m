@@ -1,11 +1,19 @@
 function [myStim] = loadLogs_tEMt
-% specify logfile name
-dir(['C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\log\EM\','*tEMt*txt']); % shows all logfiles in current directory
-logFilename = input('What is the name of the Log-File? ', 's');
+% specify logfile name (old way of copying from command window)
+% dir(['C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\log\EM\','*tEMt*txt']); % shows all logfiles in current directory
+% logFilename = input('What is the name of the Log-File? ', 's');
+
+% YOU NEED TO ACCESS THE STIMULUS MATERIAL FROM SESH-1
+sesh = str2double(sesh);
+sesh = sesh - 1;
+sesh = num2str(sesh);
+if size(sesh,2) == 1; sesh = ['0', sesh]; end
+
+% NAME OF THE LOGFILE
+logFilename = dir(['C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\log\EM\', subjID, '_tEMt_', sesh, '_*', '_LogFile_EMtask.txt']);
 
 %% read logfile
 % Initialize variables.
-raw = [];
 filename = logFilename;
 delimiter = '\t';
 startRow = 7;
