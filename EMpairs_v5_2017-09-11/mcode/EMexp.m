@@ -1,55 +1,5 @@
 function EMexp(params)
-%% default params
-if nargin ==0
-    %     params.basepath = 'C:\Experiments\EMpairs_v4_2016-1007';
-    %     params.start_idx = [];% can be used to start from a specific BLOCK on
-    %     params.initial_diff_level = 14;
-    %     params.p2f = ['C:\Experiments\EMpairs_v4_2016-1007\image_data\EMtune\fVSp_resized\empairs',filesep];
-    %     params.concept_neurons = {'f_','p_'};
-    %     %params.p2f = [params.basepath,filesep,'image_data',filesep,'screening_2016-0523',filesep,'empairs',filesep];
-    %     %params.concept_neurons = {'f_','p_'};
-    %     %params.data_ID = ['P02_fVSp_SE02'];
-    %     %params.debugmode = 'no';
-    %     params.data_ID = ['debug'];
-    %     params.debugmode = 'mode2';
-    %     params.p2log = [params.basepath,filesep,'log',filesep,'EM',filesep];
-    %     params.Ed = [2 1];
-    %     params.Ret =  2;
-    %     params.sc_trsh = [.01 .01];% change treshold [hits misses]
-    %     params.r = [3 3];% change rate [hits misses]
-    %     params.savep = [params.basepath,filesep,'params',filesep];
-    %     params.baseperf = .6;
-    %     params.enctrig = 7;%will be 51,52,53
-    %     params.rettrig = 7;%will be 61,62,63
-    %     params.starttrig = 255;
-    %     get_clock_time;
-    %     params.fid = fopen([params.p2log,params.data_ID,'_',date,'_',ct,'_LogFile_EMtask.txt'],'w');
-end
-%% DOC
-% 21/06/2016 - FRO: fixed bug in the readout of the random numbers in distractor task
-%            - FRO: add nanmedian to adaptive measurement of performance to
-%            avoid NaN-related error
-%27/06/2026 - FRO: fixed bug in random number readout for distractor task
-%28/06/2016 - FRO: fixed NaN values in response output
-%04/07/2016 - FRO: fixed bug in response output
-%05/07/2016 - FRO: fixed bug in response output
-%06/07/2016 - FRO: fixed bug in how foils get selected
-%06/07/2016 - FRO: fixed bug in distractor number sequence
-%27/04/2017 - FRO: code revision, fixed minor bugs
-%28/04/2017 - FRO: code revision, fixed minor bugs
-%29/04/2017 - FRO: code revision, fixed minor bugs
-%30/04/2017 - FRO: code revision, fixed minor bugs
-%01/05/2017 - FRO: code revision, fixed minor bugs
-%02/05/2017 - FRO: code revision, added some changes to the concept-neuron pair assignments, fixed minor bugs
-%03/05/2017 - FRO: code revision, changed the priority settings during
-%encoding and retrieval
-%03/06/2017 - FRO: added flags if crash happens during task to start again
-%from either encoding or retrieval
-%also changed the way hit rate is computed as there was
-%a bug in how the hit rate was calculated because of
-% a change introduced previously
 
-%% START
 try
     %% add folder with m-files to MATLAB path
     addpath([params.basepath,filesep,'mcode',filesep]);

@@ -5,7 +5,7 @@
 % University of Birmingham, 2019
 
 function [trg, patientID, sesh, lang] = start_tEMt_exp
-basepath = [ 'C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11' ]; % substitute with your experiment path
+basepath = [ 'X:\Luca\tEMt\EMpairs_v5_2017-09-11' ]; % substitute with your experiment path
 
 %% NOTHING NEEDS TO BE CHANGED FROM HERE
 % INPUT PROMPT
