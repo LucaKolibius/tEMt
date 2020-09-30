@@ -1,7 +1,7 @@
 function start_tEMt
 
 addpath('X:\Luca\tEMt\commonFunctions')
-addpath(genpath('X:\Luca\toolboxes\Psychtoolbox'))
+addpath('X:\toolbox\Psychtoolbox')
 
 %% TUNING EXPERIMENT (PRE)
 %  not currently implemented

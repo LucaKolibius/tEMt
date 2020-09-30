@@ -110,13 +110,16 @@ concept_neurons = {'a_'}; % this is for the tEMt version
 params.data_ID = [patientID,'_tEMt_',sesh];
 % params.debugmode = 'no';
 if strcmp(sesh, '01')
-    p2img = 'C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\image_data\EMtune\formatted_180-180\stimMat\';
+    %     p2img = 'C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\image_data\EMtune\formatted_180-180\stimMat\';
+    p2img = [basepath, '\image_data\EMtune\formatted_180-180\stimMat\'];
 else
-    p2img = ['C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\image_data\EMtune\formatted_180-180', filesep, 'subjectSpecific', filesep, patientID, filesep,'sesh' sesh, filesep];
+    %     p2img = ['C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\image_data\EMtune\formatted_180-180', filesep, 'subjectSpecific', filesep, patientID, filesep,'sesh' sesh, filesep];
+    p2img = [basepath, '\image_data\EMtune\formatted_180-180', filesep, 'subjectSpecific', filesep, patientID, filesep,'sesh' sesh, filesep];
 end
 
 if strcmp(params.trg, 'debug')
-    p2img = 'C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\image_data\EMtune\formatted_180-180\practice\';
+%     p2img = 'C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\image_data\EMtune\formatted_180-180\practice\';
+    p2img = [basepath, '\image_data\EMtune\formatted_180-180\practice\'];
 end
 params.concept_neurons = concept_neurons;
 params.p2f = p2img;
