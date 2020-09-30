@@ -1,6 +1,6 @@
 function EMexp(params)
 
-try
+% try
     %% add folder with m-files to MATLAB path
     addpath([params.basepath,filesep,'mcode',filesep]);
     
@@ -262,18 +262,18 @@ try
     fclose(params.fid);
     return;
     
-catch er
-    
-    %% save the set of final parameters
-    get_clock_time;
-    save([params.savep,params.data_ID,'_',date,'_',ct,'_params_aborted2.mat'],'params');
-    send_crashTrig(params)
-    sca;% Clear the screen
-    close all;
-    fclose(params.fid);
-    psychrethrow(psychlasterror)
-    error('program aborted');
-    er.message
-    
-end
+% catch er
+%     
+%     %% save the set of final parameters
+%     get_clock_time;
+%     save([params.savep,params.data_ID,'_',date,'_',ct,'_params_aborted2.mat'],'params');
+%     send_crashTrig(params)
+%     sca;% Clear the screen
+%     close all;
+%     fclose(params.fid);
+%     psychrethrow(psychlasterror)
+%     error('program aborted');
+%     er.message
+%     
+% end
 end

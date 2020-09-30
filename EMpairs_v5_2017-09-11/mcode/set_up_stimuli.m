@@ -4,7 +4,7 @@ if nargin == 0
     params.p2f = '/home/rouxf/Exp_EM/test/';
     params.concept_neurons = {'gstq','bb'};
     backgrnd = 'n';
-end;
+end
 
 %% search for and get image file-names
 [Impath] = [params.p2f]; % path where images are stored

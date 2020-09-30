@@ -8,21 +8,29 @@ function [trg, patientID, sesh, lang] = start_tEMt_exp
 basepath = [ 'X:\Luca\tEMt\EMpairs_v5_2017-09-11' ]; % substitute with your experiment path
 
 %% NOTHING NEEDS TO BE CHANGED FROM HERE
-% INPUT PROMPT
-prompt   = {'Trigger (Test oder TTL):','Patienten ID (sub-10XX):', 'Sitzung (XX):', 'Schwierigkeitsgrad:', 'Sprache:'};
-dlgtitle = 'Eingabe';
-dims     = [1 35];
-definput = {'','sub-10XX','01','20', 'german'};
-answer   = inputdlg(prompt,dlgtitle,dims,definput);
+% % INPUT PROMPT
+% prompt   = {'Trigger (Test oder TTL):','Patienten ID (sub-10XX):', 'Sitzung (XX):', 'Schwierigkeitsgrad:', 'Sprache:'};
+% dlgtitle = 'Eingabe';
+% dims     = [1 35];
+% definput = {'','sub-10XX','01','20', 'german'};
+% answer   = inputdlg(prompt,dlgtitle,dims,definput);
+% 
+% % PARSE-IN INPUT
+% trg        = lower(answer{1});
+% trg        = regexprep(trg, 'test', 'debug'); % if input is "test" change trigger to debug mode
+% patientID  = lower(answer{2});
+% sesh       = answer{3};
+% if size(sesh,2) == 1; sesh = ['0', sesh]; end
+% diff_level = str2double(answer{4}); % initially should be between 16 and 20
+% lang       = lower(answer{5});
 
-% PARSE-IN INPUT
-trg        = lower(answer{1});
-trg        = regexprep(trg, 'test', 'debug'); % if input is "test" change trigger to debug mode
-patientID  = lower(answer{2});
-sesh       = answer{3};
-if size(sesh,2) == 1; sesh = ['0', sesh]; end
-diff_level = str2double(answer{4}); % initially should be between 16 and 20
-lang       = lower(answer{5});
+%%
+trg = 'debug';
+patientID = 'sub-1099';
+sesh = '01';
+diff_level = 20;
+lang = 'german';
+%%
 
 % FOR SESSION 2 AND MORE YOU EXCLUDE PREVIOUSLY SHOWN STIMULUS MATERIAL
 if ~strcmp(sesh, '01') && ~strcmp(trg,'debug') % it is not the first session and it is not the practice (debug) session
