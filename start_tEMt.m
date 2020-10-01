@@ -1,12 +1,14 @@
+% Psychophysicstoolbox need to be setup properly
 function start_tEMt
-
 addpath('X:\Luca\tEMt\commonFunctions')
-% addpath('X:\toolbox\Psychtoolbox')
 
 %% BASEPATH: THIS NEEDS TO BE ADAPTED
 basepathEM = [ 'X:\Luca\tEMt\EMpairs_v5_2017-09-11' ]; % substitute with your experiment path
 basepathTN = [ 'X:\Luca\tEMt\tuning_tEMt_041219\EMpairs_v5_2017-05-01'];
 
+% since EM and tuning were created from the same experimental code, some
+% functions overlap. If we run the tuning task, we don't want any unedited / unaltered tuning
+% functions from the EM folder to interfere.
 rmpath(genpath(basepathEM))
 rmpath(genpath(basepathTN))
 

@@ -24,7 +24,7 @@ params.trg = trg;
 
 switch strcmp(trg, 'debug')
     case 0
-        params.expDur = 1; % maximum experiment duration in minutes, might abort earlier due to stimulus material
+        params.expDur = 30; % maximum experiment duration in minutes, might abort earlier due to stimulus material
     case 1
         params.expDur = 1;
         diff_level    = 3;
