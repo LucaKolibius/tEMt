@@ -12,12 +12,14 @@ params.Enc.vbl = vbl;
 iti_trial(params, params.Enc);
 
 %%
-for encTrl = params.encTrl : length(params.trl_idx)
+for encTrl = params.encTrl : length(params.trl_idx) % this...
     % saving params
     params.encTrl = encTrl;
     get_clock_time;
-    save([params.savep,params.data_ID,'_',date,'_',ct,'_params_aborted.mat'],'params')
     
+    if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
+        save([params.savep,params.data_ID,'_',date,'_',ct,'_params_aborted.mat'],'params') % .. and this is my crash insurance
+    end
     %% make image to texture and get indices of each texture
     imageTexture = zeros(2,1);
     for kt = 1:2 % first the cue, then the associate
@@ -180,8 +182,10 @@ for encTrl = params.encTrl : length(params.trl_idx)
     %     Screen('Close',imageTexture(3));
     
     [out] = create_encoding_output(params,resp,params.trl_idx(encTrl));
-    write_output2log(params,out);
     
+    if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
+        write_output2log(params,out);
+    end
     %% ITI
     iti_trial(params, params.Enc);
     
@@ -189,5 +193,8 @@ end
 params.encTrl = 1; % reset trial counter for next block to begin at 1
 params.flag1 = 0; % set flag to 0 indicating finished encoding block
 get_clock_time; % saving params
-save([params.savep,params.data_ID,'_',date,'_',ct,'_params_aborted.mat'],'params')
+
+if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
+    save([params.savep,params.data_ID,'_',date,'_',ct,'_params_aborted.mat'],'params')
+end
 end % end of function

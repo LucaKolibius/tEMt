@@ -1,28 +1,31 @@
-function [myStim] = loadLogs_tEMt
+function [myStim] = loadLogs_tEMt(basepath, patientID, sesh)
 % specify logfile name (old way of copying from command window)
 % dir(['C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\log\EM\','*tEMt*txt']); % shows all logfiles in current directory
 % logFilename = input('What is the name of the Log-File? ', 's');
 
 % YOU NEED TO ACCESS THE STIMULUS MATERIAL FROM SESH-1
-sesh = str2double(sesh);
-sesh = sesh - 1;
-sesh = num2str(sesh);
-if size(sesh,2) == 1; sesh = ['0', sesh]; end
+% sesh = str2double(sesh);
+% sesh = sesh - 1;
+% sesh = num2str(sesh);
+% if size(sesh,2) == 1; sesh = ['0', sesh]; end
 
 % NAME OF THE LOGFILE
-logFilename = dir(['C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\log\EM\', subjID, '_tEMt_', sesh, '_*', '_LogFile_EMtask.txt']);
+filename = dir([basepath, '\log\', patientID, '\Session_', sesh, '\*', '_LogFile_EMtask.txt']);
 
 %% read logfile
 % Initialize variables.
-filename = logFilename;
 delimiter = '\t';
 startRow = 7;
 
 % Read columns of data as text:
 formatSpec = '%s%s%s%s%s%s%s%s%s%s%s%s%[^\n\r]';
 
+if size(filename,1) > 1
+    error('You have more than one logfile in your session folder (EMpairs\log\subjectID\sessionID).');
+end
+
 % Open the text file.
-fileID = fopen(['C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\log\EM\', filename], 'r');
+fileID = fopen([filename.folder, filesep, filename.name], 'r');
 if fileID == -1
     error('Could not open file. Invalid fileID');
 end

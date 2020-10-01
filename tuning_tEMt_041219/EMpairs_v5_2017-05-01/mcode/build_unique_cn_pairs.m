@@ -16,7 +16,7 @@ while flag <1
     idx = zeros(length(ID2),1);
     for it = 1:length(ID2)        
         idx(it) = it;% assign number to each image        
-    end;
+    end
     
     %% 
     concept_n = params.concept_neurons;%concept neuron labels
@@ -29,12 +29,12 @@ while flag <1
         chck2 = zeros(length(chck),1);
         for jt = 1:length(chck)
             chck2(jt) = isempty(chck{jt});
-        end;
+        end
         
         ix = find(chck2 ==0);
         cc(ix) = it+zeros(length(ix),1);
         
-    end;
+    end
     
     %% generate condition labels
     n = length(concept_n);
@@ -48,9 +48,9 @@ while flag <1
             k=k+1;
             cp(k,:) = [it jt];
             
-        end;
+        end
         x1 = x1+1;
-    end;
+    end
     
     %% store the indexes of the cues 
     samp = [idx cc];
@@ -74,7 +74,7 @@ while flag <1
             ix = cell(length(p),1);
             for jt = 1:length(p)
                 ix{jt} = find(samp(:,2) == p(jt));
-            end;
+            end
             if isempty(ix{1})
                 f1=1;
             else
@@ -90,20 +90,20 @@ while flag <1
                         sel(2) = ix{2}(1);
                         if sel(2) ~= sel(1)
                             f2=1;
-                        end;
-                    end;
-                end;
+                        end
+                    end
+                end
                 
                 if length(sel) ==2
                     trl = trl+1;
                     h(trl,:) = p;
                     seq(2:3,trl) = samp(sel,1);
                     samp(sel,:) = [];
-                end;
-            end;
-        end;
+                end
+            end
+        end
         
-    end;
+    end
     
     %%
     ix2 = find(samp(:,2)~=0);
@@ -131,23 +131,23 @@ while flag <1
                 
                 sel_mem = [sel_mem;sel];
                 samp(ix,:) = [];
-            end;
+            end
             
-        end;
-    end;
+        end
+    end
     
     %%     
     if size(seq,2) > length(c_idx)
         for it = 1:length(c_idx)
             seq(1,it) = c_idx(it);
-        end;
+        end
         seq(:,it+1:size(seq,2)) =[];
         
     else
         for it = 1:size(seq,2)
             seq(1,it) = c_idx(it);
-        end;
-    end;
+        end
+    end
     
     %% sanity checks
     if any(ismember(sel_mem(:),seq(:)));error('overlap between images detected');end;%sanity check
@@ -165,14 +165,14 @@ while flag <1
             rsel = rsel(1);
             seq(:,end+1) = [c(it) sel_mem(rsel,:)]';
             sel_mem(rsel,:) = [];
-        end;
-    end;
+        end
+    end
        
     %%
     ix = randperm(size(seq,2));
     for it =1:1e3
         ix = ix(randperm(length(ix)));
-    end; 
+    end
     
     seq = seq(:,ix);
     
@@ -181,7 +181,7 @@ while flag <1
     x = x(:);
     if (length(x) == length(unique(x))) ~= 1
         error('non-unique event codes not permitted');
-    end;
+    end
     
     %%
     stim_mat.tc = [];
@@ -207,15 +207,15 @@ while flag <1
                     c =c+1;
                     chck(c) = 1;
                     fprintf('warning searching for compatible cn-pair configuration\n');
-                end;
-            end;
-        end;
-    end;
+                end
+            end
+        end
+    end
     
     if sum(chck)==0
         flag=1;
-    end;
+    end
     
-end;
+end
 fprintf('exiting cn pair configuration: all pairs ok\n');
 return;

@@ -302,6 +302,7 @@ function [params] = run_retrieval(params)
             params.RT = [params.RT 1e6];%add 2x NaNs because of the missing RTs
         end
         %     end
+        
         %%
         if isnan(tarFoil)
             rt2 = NaN;
@@ -310,8 +311,8 @@ function [params] = run_retrieval(params)
         [params.ot(3)] = {num2str(qFlip)};                           % when questions comes up ~2s after cue
         [params.ot(4)] = {num2str(tarFoil)};                         % when showing the stimuli (targets and foils)
         [params.ot(5)] = {num2str(tarFoil + rt2)};                   % when responding to matrix of target/distractors
-        [out] = create_retrieval_output(params, params.trl_idx(retTrl));  % c is a counter for trials within that block
-
+        [out] = create_retrieval_output(params, params.trl_idx(c));  % c is a counter for trials within that block
+        
         if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
             write_output2log(params,out);
         end

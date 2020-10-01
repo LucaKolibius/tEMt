@@ -10,7 +10,6 @@ ot = cell(length(trl_idx),3);
 % Perform initial Flip and sync us to the retrace:
 vbl = Screen('Flip', params.window);
 
-
 %%
 f=0;
 response = [];
@@ -21,9 +20,10 @@ if ~strcmp(params.trg,'debug')
 else
     tStart = GetSecs;
 end
+
 for frame = 1:params.numFrames(1)
     
-    Screen('FillRect',params.window, params.bc_color);
+    Screen('FillRect', params.window, params.bc_color);
     Screen('DrawTexture', params.window, params.imageTexture,[],  params.centeredRect, 0);
     
     % display response category information below stimulus image
@@ -72,7 +72,10 @@ resp.btn = response;
 resp.rt = rt;%+ params.stimd;
 %%
 out = [num2str(trl_idx),'\t',params.Imf(trl_idx).name,'\t',params.ID{trl_idx}(1),'\t',num2str(resp.btn),'\t',ot{1},'\t',ot{2},'\t',ot{3},'\t',num2str(resp.rt),'\n'];
-write_output2log_concept_tuning(params.fid,out);
+
+if ~strcmp(params.trg, 'debug') % we don't create folders for debug runs
+    write_output2log_concept_tuning(params.fid,out);
+end
 end
 %%
 % 26/04/2017

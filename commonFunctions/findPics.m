@@ -1,15 +1,16 @@
-function findPics(patientID, sesh)
+function findPics(basepath, patientID, sesh)
 % addpath('C:\Experiments\tuning_fVSp_13022019\');
 % addpath('C:\Experiments\tuning_tEMt_041219\functions\');
-myStim = loadLogs_tEMt; % finds the unique stimulus labels used in the specified logfile
+basepathEM = regexprep(basepath, 'tuning_tEMt_041219\\EMpairs_v5_2017-05-01', 'EMpairs_v5_2017-09-11');
+myStim     = loadLogs_tEMt(basepathEM, patientID, sesh); % finds the unique stimulus labels used in the specified logfile
 
 % session folder with all the images used for post tuning
 d = datestr(now,'ddmmyyyy');
-destination = ['C:\Experiments\tuning_tEMt_041219\EMpairs_v5_2017-05-01\image_data\Tune\', patientID, filesep, 'sesh',sesh, '_postEM_',d, filesep];
+destination = [basepath, '\image_data\Tune\', patientID, filesep, 'sesh',sesh, '_postEM_',d, filesep];
 mkdir(destination)
 
 % this is where the stimuli come from
-sourceFolder = 'C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\image_data\EMtune\formatted_180-180\stimMat\'; % all 359 possible stimuli that can be used in the task minus the ones used in the practice run
+sourceFolder = [basepathEM, '\image_data\EMtune\formatted_180-180\stimMat\']; % all 359 possible stimuli that can be used in the task minus the ones used in the practice run
 
 for i = 1:numel( myStim )
     if ~isempty(myStim{i})

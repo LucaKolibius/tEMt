@@ -99,10 +99,14 @@ try
     end
     
     %% prepare logfile
-    params = prepare_concept_tuning_logfile(params);
+    if ~strcmp(params.trg, 'debug') % we don't create folders for debug runs
+        params = prepare_concept_tuning_logfile(params);
+    end
     
     %% save params structure
-    save([params.p2params,params.data_ID,'_',params.date,'_',params.tmstp,'_tuning_params_init.mat'],'params');
+    if ~strcmp(params.trg, 'debug') % we don't create folders for debug runs
+        save([params.p2params,params.data_ID,'_',params.date,'_',params.tmstp,'_tuning_params_init.mat'],'params');
+    end
     
     %% prep trigger box + start trigger
     % ttl trigger
@@ -152,6 +156,11 @@ try
     nImg = length(params.idx);
     Priority(params.topPriorityLevel);
     
+    % let's do fewer practice trials
+    if strcmp(params.trg, 'debug')
+        nImg = 4;
+    end
+    
     for yt = params.startBlock:params.nreps % loop each pic over the reps    % from 1 to 8(reps)
         params.startBlock = yt;
         disp('Resume at block: ')
@@ -170,14 +179,14 @@ try
         disp('Using Order: ');
         disp(params.idx);
         
-        
-        
         for kt = params.start_trl:nImg % from 1 to number of images
             params.start_trl = kt;
             
             % save parameters
-            create_logfile_timestamp
-            save([params.p2params,params.data_ID,params.date,'_',tmstp,'_tuning_params_aborted.mat'],'params'); % params.tmstp will be from the experiment start
+            if ~strcmp(params.trg, 'debug') % we don't create folders for debug runs
+                create_logfile_timestamp
+                save([params.p2params,params.data_ID,params.date,'_',tmstp,'_tuning_params_aborted.mat'],'params'); % params.tmstp will be from the experiment start
+            end
             
             disp('Resume at trial: ');
             disp(kt);
@@ -195,8 +204,7 @@ try
             
             %% ITI
             iti_trial(iti_params{kt});
-            
-            
+
             %% break % (break whenever we reach 25% / 50% / 75%
             if ismember(c,pct)
                 [break_params] = compute_numFrames(params,5/100);
@@ -218,7 +226,11 @@ try
     Screen('CloseAll');
     sca;
     close all;
-    fclose(params.fid);
+    
+    if ~strcmp(params.trg, 'debug') % we don't create folders for debug runs
+        fclose(params.fid);
+    end
+    
     clear all;
     return;
     
@@ -233,3 +245,5 @@ catch
     psychrethrow(psychlasterror);
     error('program aborted');
 end
+
+end % END OF FUNCTION

@@ -1,6 +1,6 @@
 function EMexp(params)
 
-% try
+try
     %% add folder with m-files to MATLAB path
     addpath([params.basepath,filesep,'mcode',filesep]);
     
@@ -82,7 +82,9 @@ function EMexp(params)
     end
     
     %% prepare LOGFILE
-    [params] = prepare_EMlogfile(params);
+    if ~strcmp(params.trg, 'debug') % don't need a logfile for debuge mode
+        [params] = prepare_EMlogfile(params);
+    end
     
     %% create randum numbers for the distractor trial
     rand('state',sum(100*clock));
@@ -95,8 +97,10 @@ function EMexp(params)
     params.st = GetSecs; % get start time
     
     %% save Exp-parameter file
-    get_clock_time;
-    save ([params.savep, params.data_ID, '_', date, '_', ct, '_params_initialized.mat'],'params');
+    if ~strcmp(params.trg, 'debug') % don't need params for debuge mode
+        get_clock_time;
+        save([params.savep, params.data_ID, '_', date, '_', ct, '_params_initialized.mat'],'params');
+    end
     
     %% send the start trigger
     if ~strcmp(params.trg, 'debug')
@@ -119,6 +123,7 @@ function EMexp(params)
     disp(params.stim_mat.seq);
     disp('params.trl_idx: ');
     disp(params.trl_idx);
+    
     %% start the graphics
     while endExp<1
         %% flag reset until l.212
@@ -164,7 +169,10 @@ function EMexp(params)
             if params.c == 1
                 instructions1(params);
             end
-            write_output2log(params,['ENC',num2str(params.c)]);
+            
+            if ~strcmp(params.trg, 'debug') % don't need a logfile for debuge mode
+                write_output2log(params,['ENC',num2str(params.c)]);
+            end
             
             %% Encoding task
             [params] = run_encoding(params);
@@ -186,7 +194,10 @@ function EMexp(params)
             if params.c ==1
                 instructions3(params);
             end
-            write_output2log(params,['RET',num2str(params.c)]);
+            
+            if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
+                write_output2log(params,['RET',num2str(params.c)]);
+            end
             
             %% Retrieval task
             [params] = run_retrieval(params);
@@ -242,16 +253,25 @@ function EMexp(params)
         
         %% break trial
         if endExp ~=1
-            write_output2log(params,['BreakBeg',num2str(params.c),'\t',num2str(GetSecs)]);
+            if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
+                write_output2log(params,['BreakBeg',num2str(params.c),'\t',num2str(GetSecs)]);
+            end
+            
             wait_barEM(params);
-            write_output2log(params,['BreakEnd',num2str(params.c),'\t',num2str(GetSecs)]);
+            
+            if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
+                write_output2log(params,['BreakEnd',num2str(params.c),'\t',num2str(GetSecs)]);
+            end
         end
         
     end
     
     %%  save the set of final parameters
     get_clock_time;
-    save([params.savep, params.data_ID, '_', date, '_', ct, '_params_completed.mat'],'params');
+    
+    if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
+        save([params.savep, params.data_ID, '_', date, '_', ct, '_params_completed.mat'],'params');
+    end
     
     %% END
     end_of_task(params);
@@ -259,21 +279,25 @@ function EMexp(params)
     %% Clear the screen and the memory
     sca;
     close all;
-    fclose(params.fid);
+    
+    if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
+        fclose(params.fid);
+    end
+    
     return;
     
-% catch er
-%     
-%     %% save the set of final parameters
-%     get_clock_time;
-%     save([params.savep,params.data_ID,'_',date,'_',ct,'_params_aborted2.mat'],'params');
-%     send_crashTrig(params)
-%     sca;% Clear the screen
-%     close all;
-%     fclose(params.fid);
-%     psychrethrow(psychlasterror)
-%     error('program aborted');
-%     er.message
-%     
-% end
+catch er
+    
+    %% save the set of final parameters
+    get_clock_time;
+    save([params.savep,params.data_ID,'_',date,'_',ct,'_params_aborted2.mat'],'params');
+    send_crashTrig(params)
+    sca;% Clear the screen
+    close all;
+    fclose(params.fid);
+    psychrethrow(psychlasterror)
+    error('program aborted');
+    er.message
+    
+end
 end
