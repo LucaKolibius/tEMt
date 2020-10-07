@@ -50,7 +50,8 @@ if isempty(btns)
     btns.ctrlR = KbName('RightControl');
     btns.zero = KbName('0');
     btns.end = KbName('End');
+    btns.minus = KbName('-');
 end
-btns.escapeKey = KbName('Escape');
+% btns.escapeKey = KbName('Escape');
 
 return;

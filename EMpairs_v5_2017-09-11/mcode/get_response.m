@@ -61,6 +61,9 @@ while respToBeMade == true
         elseif keyCode(btns.end)
             response = 4;
             respToBeMade = false;
+        elseif keyCode(btns.minus)
+            response = 4;
+            respToBeMade = false;
         end
     end;
 end

@@ -4,7 +4,7 @@ if strcmp(lang, 'english')
     params.instructions1.a = 'Please imagine a story containing the two following images.';
     params.instructions1.b = 'After you have memorized each story, you will be asked';
     params.instructions1.c = 'to rate how plausible it is.';
-    params.instructions1.d = 'Press button to start.';
+    params.instructions1.d = 'Press arrow-key to start.';
     
     params.encoding.a = 'Plausible';
     params.encoding.b = 'Implausible';
@@ -12,7 +12,7 @@ if strcmp(lang, 'english')
     params.instructions2.a = 'During the next task you will see different numbers.';
     params.instructions2.b = 'If the number is odd, press left arrow.';
     params.instructions2.c = 'If the number is even, press right arrow.';
-    params.instructions2.d = 'Press button to start.';
+    params.instructions2.d = 'Press arrow-key to start.';
     
     params.distr.odd = 'Odd';
     params.distr.even = 'Even';
@@ -20,13 +20,13 @@ if strcmp(lang, 'english')
     params.instructions3.a = 'During the next task you will see one image.';
     params.instructions3.b = 'Please try to remember your story';
     params.instructions3.c = 'and recall the missing image.';
-    params.instructions3.d = 'Press button to start.';
+    params.instructions3.d = 'Press arrow-key to start.';
     
     params.retrieval.a = 'Do you remember the image that belongs here?';
     params.retrieval.b = 'No (left) / Yes (right)';
     
     params.break.a = 'Block completed. Take a short break ...';
-    params.break.b = 'Press button to continue.';
+    params.break.b = 'Press arrow-key to continue.';
     params.complete = 'Task completed. Thank you!';
     
     % tuning
@@ -39,13 +39,13 @@ if strcmp(lang, 'english')
     params.tunInstr7 = 'Please maintain your gaze on the centre of the screen.';
     params.tunInstr8 = 'Press arrow-key to begin with the task.';
     params.tunInstrBreak1 = '% of task completed. Take a short break ...';
-    params.tunInstrBreak2 = 'Press button to continue.';
+    params.tunInstrBreak2 = 'Press arrow-key to continue.';
 
 elseif strcmp(lang,'german')
     params.instructions1.a = 'Bitte stellen Sie sich eine Geschichte mit den folgenden beiden Bildern vor.';
     params.instructions1.b = 'Im Anschluss werden Sie gefragt wie plausibel ';
     params.instructions1.c = 'diese Geschichte ist.';
-    params.instructions1.d = 'Druecken Sie eine beliebige Taste um zu beginnen.';
+    params.instructions1.d = 'Druecken Sie eine beliebige Pfeiltaste um zu beginnen.';
     
     params.encoding.a = 'Plausibel';
     params.encoding.b = 'Unplausibel';
@@ -53,7 +53,7 @@ elseif strcmp(lang,'german')
     params.instructions2.a = 'Waehrend der naechsten Aufgabe werden Sie verschiedene Nummern sehen';
     params.instructions2.b = 'Ist die Nummer ungerade, druecken Sie die linke Pfeiltaste.';
     params.instructions2.c = 'Ist die Nummer gerade, druecken Sie die rechte Pfeiltaste.';
-    params.instructions2.d = 'Druecken Sie eine beliebige Taste um zu beginnen.';
+    params.instructions2.d = 'Druecken Sie eine beliebige Pfeiltaste um zu beginnen.';
     
     params.distr.odd = 'Ungerade';
     params.distr.even = 'Gerade';
@@ -61,13 +61,13 @@ elseif strcmp(lang,'german')
     params.instructions3.a = 'Waehrend der naechsten Aufgabe sehen Sie ein Bild.';
     params.instructions3.b = 'Bitte versuchen Sie sich an Ihre Geschichte';
     params.instructions3.c = 'und das fehlende Bild zu erinnern.';
-    params.instructions3.d = 'Druecken Sie eine beliebige Taste um zu beginnen.';
+    params.instructions3.d = 'Druecken Sie eine beliebige Pfeiltaste um zu beginnen.';
     
     params.retrieval.a = 'Erinnern Sie sich an das dazugehoerige Bild?';
     params.retrieval.b = 'Nein (links) / Ja (rechts)';
     
     params.break.a = 'Block beendet. Nehmen Sie eine kurze Auszeit ...';
-    params.break.b = 'Druecken Sie eine beliebige Taste um fortzufahren.';
+    params.break.b = 'Druecken Sie eine beliebige Pfeiltaste um fortzufahren.';
     params.complete = 'Aufgabe abgeschlossen. Vielen Dank!';
     
     % tuning
@@ -80,13 +80,13 @@ elseif strcmp(lang,'german')
     params.tunInstr7 = 'Bitte sehen Sie stets auf die Mitte des Bildschirms.';
     params.tunInstr8 = 'Druecken Sie eine beliebige Pfeiltaste um zu beginnen.';
     params.tunInstrBreak1 = '% des Experiments beendet. Zeit fuer eine kurze Pause ...';
-    params.tunInstrBreak2 = 'Druecken Sie eine beliebige Taste um fortzufahren.';
+    params.tunInstrBreak2 = 'Druecken Sie eine beliebige Pfeiltaste um fortzufahren.';
 
 elseif strcmp(lang, 'dutch')
     params.instructions1.a = 'Stel je een verhaal met de volgende twee plaatjes voor';
     params.instructions1.b = 'en probeer het verhaaltje te onthouden. Geef aan waneer je';
     params.instructions1.c = 'hiermee klaar bent of jou verhaal geloofwaardig of ongeloofwaardig is. ';
-    params.instructions1.d = 'Druk een knop om te beginnen.';
+    params.instructions1.d = 'Druk een pijl knop om te beginnen.';
     
     params.encoding.a = 'Geloofwaardig';
     params.encoding.b = 'Ongeloofwaardig';
@@ -94,7 +94,7 @@ elseif strcmp(lang, 'dutch')
     params.instructions2.a = 'In het volgende deel van het experiment zie je telkens een getal';
     params.instructions2.b = 'Als het getal op het scherm oneven is, druk de linker pijl knop.';
     params.instructions2.c = 'Als het getal op het scherm even is, druk de rechter pijl knop.';
-    params.instructions2.d = 'Druk een knop om door te gaan.';
+    params.instructions2.d = 'Druk een pijl knop om door te gaan.';
     
     params.distr.odd = 'Oneven';
     params.distr.even = 'Even';
@@ -102,12 +102,12 @@ elseif strcmp(lang, 'dutch')
     params.instructions3.a = 'In het volgende deel van het experiment zie je telkens een plaatje uit het eerste deel';
     params.instructions3.b = 'Probeer je te herinneren aan het bijbehorende verhaaltje';
     params.instructions3.c = 'en probeer je te herinneren aan het ontbrekende plaatje dat erbij hoort.';
-    params.instructions3.d = 'Druk een knop om door te gaan.';
+    params.instructions3.d = 'Druk een pijl knop om door te gaan.';
     
     params.retrieval.a = 'Herinner je je aan het plaatje dat hierbij hoort?';
     params.retrieval.b = 'Nee (links) / Ja (rechts)';
     
     params.break.a = 'Yay, je bent klaar met dit blok. Neem een korte pauze ...';
-    params.break.b = 'Druk een knop om door te gaan.';
+    params.break.b = 'Druk een pijl knop om door te gaan.';
     params.complete = 'Je bent klaar met het experiment! Heel erg bedankt voor het meedoen!';
 end
