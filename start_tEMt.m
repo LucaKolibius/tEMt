@@ -72,34 +72,38 @@ lang       = lower(answer{5});
 %% INPUT PROMPT DIFFICULTY
 %  FIND PREVIOUS DIFFICULTY LEVEL IF POSSIBLE
 %  (this could be combined with the suggestSesh part)
-try
-prevSesh = sesh;
-prevSesh = str2double(sesh); 
-prevSesh = prevSesh - 1;
-prevSesh = num2str(prevSesh);
-if size(prevSesh,2) == 1; prevSesh = ['0', prevSesh]; end
-
-prevParams    = dir([basepathEM,'\params\',patientID,'\Session_',prevSesh, filesep]); % where to save params
-load([prevParams(end).folder, filesep, prevParams(end).name], 'params');
-prevDif = num2str(params.diff_level);
-catch
-    prevDif = '20';
+if strcmp(trg, 'debug')
+    diff_level = 4;
+else
+    
+    try % to retrieve previous difficulty level
+        prevSesh = sesh;
+        prevSesh = str2double(sesh);
+        prevSesh = prevSesh - 1;
+        prevSesh = num2str(prevSesh);
+        if size(prevSesh,2) == 1; prevSesh = ['0', prevSesh]; end
+        
+        prevParams    = dir([basepathEM,'\params\',patientID,'\Session_',prevSesh, filesep]); % where to save params
+        load([prevParams(end).folder, filesep, prevParams(end).name], 'params');
+        prevDif = num2str(params.diff_level);
+    catch % or just use 20 as a suggestion
+        prevDif = '20';
+    end
+    
+    prompt       = {'Schwierigkeitsgrad:'};
+    dlgtitle     = 'Eingabe (2/2)';
+    dims         = [1 35];
+    definput     = {prevDif};
+    answerDiff   = inputdlg(prompt,dlgtitle,dims,definput);
+    
+    diff_level = str2double(answerDiff{1}); % initially should be between 16 and 20
 end
-
-prompt       = {'Schwierigkeitsgrad:'};
-dlgtitle     = 'Eingabe (2/2)';
-dims         = [1 35];
-definput     = {prevDif};
-answerDiff   = inputdlg(prompt,dlgtitle,dims,definput);
-
-diff_level = str2double(answerDiff{1}); % initially should be between 16 and 20
-if strcmp(trg, 'debug'); diff_level = 4; end
 
 %% RUN EM-TASK OR TUNING
 % ONLY POST EM TUNING IS IMPLEMENTED
 
 if strcmp(tunEM, 'tun') % TUNING TASK
-    start_tEMt_tuning(basepathTN, trg, patientID, sesh, lang)          % input through dialogue box
+    start_tEMt_tuning(basepathTN, trg, patientID, sesh, lang)              % input through dialogue box
     
 elseif strcmp(tunEM, 'em') % EPISODIC MEMORY EXPERIMENT
     start_tEMt_exp(basepathEM, trg, patientID, sesh, diff_level, lang);    % input through dialogue box
