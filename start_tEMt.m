@@ -13,27 +13,35 @@ rmpath(genpath(basepathEM))
 rmpath(genpath(basepathTN))
 
 %% TRY TO SUGGEST A NEW SESSION NUMBER
-suggestSesh = 1;
-
-findSbj    = dir([basepathEM,'\params\s*']); % CHANGE TO SUBJXXX WHATEVER % FIND LAST SUBJECT FOLDER
-[~,idx]     = sort([findSbj.datenum]);
+%  FIND LAST SUBJECT
+findSbj    = dir([basepathTN,'\params\sub*']); 
+[~,idx]    = sort([findSbj.datenum]);
 findSbj    = findSbj(idx);
 
-%% check if >1 week -> previous patient
-if now - findSbj(end).datenum >= 6 % IF THE NUMBER OF DAYS SINCE THE LAST PATIENT FOLDER IS OVER 6 IT SUGGESTS A NEW PATIENT
+%% FIND LAST COMPLETED SESSION
+
+if isempty(findSbj) % first ever subject
     suggestSesh = 1;
 else
-    temp = dir([findSbj(end).folder, filesep, findSbj(end).name, filesep, 'sesh*']); % FIND LAST SESSION
-    [~,idx]     = sort([temp.datenum]);
-    temp = temp(idx);
     
-    finishedSesh = ~isempty(dir([temp(end).folder, filesep, temp(end).name, filesep, '*_params_completed.mat']));
-    
-    switch finishedSesh
-        case 0
-            suggestSesh = size(temp,1);
-        case 1
-            suggestSesh = size(temp,1) + 1;
+    % IF THE NUMBER OF DAYS SINCE THE LAST PATIENT FOLDER IS OVER 6 IT SUGGESTS A NEW PATIENT
+    if now - findSbj(end).datenum >= 6 
+        suggestSesh = 1;
+        
+    else
+        % FIND LAST SESSION
+        allSesh = dir([findSbj(end).folder, filesep, findSbj(end).name, filesep, 'Session_*']); 
+        [~,idx] = sort([allSesh.datenum]);
+        allSesh = allSesh(idx);
+        
+        % Is the last TN session completed?
+        finishedSesh = ~isempty(dir([allSesh(end).folder, filesep, allSesh(end).name, filesep, '*_params_completed.mat']));
+        switch finishedSesh
+            case 0
+                suggestSesh = size(allSesh,1);
+            case 1
+                suggestSesh = size(allSesh,1) + 1;
+        end
     end
 end
 suggestSesh = num2str(suggestSesh);
