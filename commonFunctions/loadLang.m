@@ -19,7 +19,7 @@ if strcmp(lang, 'english')
     
     params.instructions3.a = 'During the next task you will see one image.';
     params.instructions3.b = 'Please try to remember your story';
-    params.instructions3.c = 'and recall the missing image.';
+    params.instructions3.c = 'and recall the missing image (choose with "-").';
     params.instructions3.d = 'Press arrow-key to start.';
     
     params.retrieval.a = 'Do you remember the image that belongs here?';
@@ -60,7 +60,7 @@ elseif strcmp(lang,'german')
     
     params.instructions3.a = 'Waehrend der naechsten Aufgabe sehen Sie ein Bild.';
     params.instructions3.b = 'Bitte versuchen Sie sich an Ihre Geschichte';
-    params.instructions3.c = 'und das fehlende Bild zu erinnern.';
+    params.instructions3.c = 'und das fehlende Bild zu erinnern (Auswahl mit "-").';
     params.instructions3.d = 'Druecken Sie eine beliebige Pfeiltaste um zu beginnen.';
     
     params.retrieval.a = 'Erinnern Sie sich an das dazugehoerige Bild?';
@@ -101,7 +101,7 @@ elseif strcmp(lang, 'dutch')
     
     params.instructions3.a = 'In het volgende deel van het experiment zie je telkens een plaatje uit het eerste deel';
     params.instructions3.b = 'Probeer je te herinneren aan het bijbehorende verhaaltje';
-    params.instructions3.c = 'en probeer je te herinneren aan het ontbrekende plaatje dat erbij hoort.';
+    params.instructions3.c = 'en probeer je te herinneren aan het ontbrekende plaatje dat erbij hoort (druk op "-").';
     params.instructions3.d = 'Druk een pijl knop om door te gaan.';
     
     params.retrieval.a = 'Herinner je je aan het plaatje dat hierbij hoort?';

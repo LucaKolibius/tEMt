@@ -68,7 +68,6 @@ if ~strcmp(params.trg, 'debug') % not a practice run
         params.p2f = [basepath, '\image_data\Tune\', patientID, filesep, 'sesh',sesh, '_postEM_',d, filesep];
     end
 elseif strcmp(params.trg, 'debug')
-    params.p2f = 'C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\image_data\EMtune\formatted_180-180\practice\';
     params.p2f = [basepath, '\image_data\EMtune\formatted_180-180\practice\'];
     %     params.p2f = 'C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\image_data\EMtune\formatted_180-180\numbers\';
 end
