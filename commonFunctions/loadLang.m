@@ -58,9 +58,13 @@ elseif strcmp(lang,'german')
     params.distr.odd = 'Ungerade';
     params.distr.even = 'Gerade';
     
-    params.instructions3.a = 'Waehrend der naechsten Aufgabe sehen Sie ein Bild.';
-    params.instructions3.b = 'Bitte versuchen Sie sich an Ihre Geschichte';
-    params.instructions3.c = 'und das fehlende Bild zu erinnern (Auswahl mit "-").';
+%     params.instructions3.a = 'Waehrend der naechsten Aufgabe sehen Sie ein Bild.';
+%     params.instructions3.b = 'Bitte versuchen Sie sich an Ihre Geschichte';
+%     params.instructions3.c = 'und das fehlende Bild zu erinnern (Auswahl mit "-").';
+%     params.instructions3.d = 'Druecken Sie eine beliebige Pfeiltaste um zu beginnen.';
+    params.instructions3.a = 'Bitte versuchen Sie sich an die Geschichte und das fehlende Bild zu erinnern.';
+    params.instructions3.b = 'Navigieren Sie mit den Pfeiltasten zu dem erinnerten Bild';
+    params.instructions3.c = 'und bestätigen Sie dies mit der Taste "-".';
     params.instructions3.d = 'Druecken Sie eine beliebige Pfeiltaste um zu beginnen.';
     
     params.retrieval.a = 'Erinnern Sie sich an das dazugehoerige Bild?';
