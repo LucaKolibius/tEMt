@@ -5,7 +5,7 @@ function prepNextEMsesh(basepath, patientID, sesh)
 disp('Prepping stimulus material for upcoming session.')
 sourceFolder = [basepath, '\image_data\EMtune\formatted_180-180\stimMat\']; % all 359 possible stimuli that can be used in the task minus the ones used in the practice run
 
-myStim = loadLogs_tEMt; % used stimuli
+myStim = loadLogs_tEMt(basepath, patientID, sesh); % used stimuli
 
 % IDENTIFY UNUSED IMAGES FOR NEXT SESSION
 allIm = dir([sourceFolder, '*.jpg']);

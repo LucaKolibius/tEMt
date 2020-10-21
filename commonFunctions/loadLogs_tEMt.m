@@ -4,10 +4,10 @@ function [myStim] = loadLogs_tEMt(basepath, patientID, sesh)
 % logFilename = input('What is the name of the Log-File? ', 's');
 
 % YOU NEED TO ACCESS THE STIMULUS MATERIAL FROM SESH-1
-% sesh = str2double(sesh);
-% sesh = sesh - 1;
-% sesh = num2str(sesh);
-% if size(sesh,2) == 1; sesh = ['0', sesh]; end
+sesh = str2double(sesh);
+sesh = sesh - 1;
+sesh = num2str(sesh);
+if size(sesh,2) == 1; sesh = ['0', sesh]; end
 
 % NAME OF THE LOGFILE
 filename = dir([basepath, '\log\', patientID, '\Session_', sesh, '\*', '_LogFile_EMtask.txt']);
