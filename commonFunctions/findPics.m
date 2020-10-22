@@ -2,7 +2,7 @@ function findPics(basepath, patientID, sesh)
 % addpath('C:\Experiments\tuning_fVSp_13022019\');
 % addpath('C:\Experiments\tuning_tEMt_041219\functions\');
 basepathEM = regexprep(basepath, 'tuning_tEMt_041219\\EMpairs_v5_2017-05-01', 'EMpairs_v5_2017-09-11');
-myStim     = loadLogs_tEMt(basepathEM, patientID, sesh); % finds the unique stimulus labels used in the specified logfile
+myStim     = loadLogs_tEMt_tuning(basepathEM, patientID, sesh); % finds the unique stimulus labels used in the specified logfile
 
 % session folder with all the images used for post tuning
 d = datestr(now,'ddmmyyyy');

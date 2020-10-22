@@ -1,13 +1,13 @@
-function [myStim] = loadLogs_tEMt(basepath, patientID, sesh)
+function [myStim] = loadLogs_tEMt_tuning(basepath, patientID, sesh)
 % specify logfile name (old way of copying from command window)
 % dir(['C:\Experiments\tEMt_041219\EMpairs_v5_2017-09-11\log\EM\','*tEMt*txt']); % shows all logfiles in current directory
 % logFilename = input('What is the name of the Log-File? ', 's');
 
-% YOU NEED TO ACCESS THE STIMULUS MATERIAL FROM SESH-1
-sesh = str2double(sesh);
-sesh = sesh - 1;
-sesh = num2str(sesh);
-if size(sesh,2) == 1; sesh = ['0', sesh]; end
+% % YOU NEED TO ACCESS THE STIMULUS MATERIAL FROM SESH:
+% sesh = str2double(sesh);
+% sesh = sesh - 1;
+% sesh = num2str(sesh);
+% if size(sesh,2) == 1; sesh = ['0', sesh]; end
 
 % NAME OF THE LOGFILE
 filename = dir([basepath, '\log\', patientID, '\Session_', sesh, '\*', '_LogFile_EMtask.txt']);
