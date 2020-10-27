@@ -7,7 +7,7 @@ for it = 1:params.numFrames(1)
     %Screen('DrawTexture',  params.window, params.bckimTexture);
     Screen('FillRect',params.window, params.bc_color);
     
-    Screen('TextSize',  params.window, 40);
+    Screen('TextSize',  params.window, 34);
     DrawFormattedText( params.window, params.tunInstr1, 'center',  params.yCenter-190, [0 0 1]);
     DrawFormattedText( params.window, params.tunInstr2, 'center',  params.yCenter-120, [.25 .25 .25]);
 %     DrawFormattedText( params.window, 'Please indicate for each image, if the image belongs to', 'center',  params.yCenter-50, [.25 .25 .25]);
@@ -30,7 +30,7 @@ end
 %Screen('DrawTexture',  params.window, params.bckimTexture);
 Screen('FillRect',params.window, params.bc_color);
 
-Screen('TextSize',  params.window, 40);
+Screen('TextSize',  params.window, 34);
 DrawFormattedText( params.window, params.tunInstr1, 'center',  params.yCenter-190, [0 0 1]);
 DrawFormattedText( params.window, params.tunInstr2, 'center',  params.yCenter-120, [.25 .25 .25]);
 DrawFormattedText( params.window, params.tunInstr3, 'center',  params.yCenter-50, [.25 .25 .25]);
