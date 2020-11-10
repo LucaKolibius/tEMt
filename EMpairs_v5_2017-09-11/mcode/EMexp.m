@@ -16,7 +16,8 @@ try
     
     %% prep trigger box
     if strcmp(params.trg, 'serial')
-        params.trg_handle = IOPort('OpenSerialPort', 'COM5'); % try out COM3 otherwise, creates trigger handle
+        IOPort('CloseALL');
+        params.trg_handle = IOPort('OpenSerialPort', 'COM3'); % try out COM3 otherwise, creates trigger handle
         params.trg_data = uint8(1); % value that is being sent
     elseif strcmp(params.trg, 'ttl')
         params.daqID  = DaqDeviceIndex;

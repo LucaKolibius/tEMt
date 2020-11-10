@@ -14,7 +14,16 @@ if strcmp(params.trg, 'ttl')
 %     end
     
 elseif strcmp(params.trg, 'serial')
-    IOPort('Write',params.trg_handle, params.trg_data); % sending the trigger
+    switch bv
+        case 0
+            trigVal = uint8(3); %% start trigger
+        case 6
+            trigVal = uint8(4); %% crash trigger
+        case 7
+            trigVal = params.trg_data;
+    end
+    
+    IOPort('Write',params.trg_handle, trigVal); % sending the trigger
     
 elseif strcmp(params.trg, 'utrecht')
     fprintf(params.serial,'%c','c');

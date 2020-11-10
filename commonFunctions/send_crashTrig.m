@@ -39,15 +39,15 @@ elseif strcmp(params.trg, 'ttl')
     
 % serial trigger
 elseif strcmp(params.trg, 'serial')
-    send_ttl(params,0);
+    send_ttl(params,6);
     
     WaitSecs(.2);
-    send_ttl(params,0);
+    send_ttl(params,6);
     
     WaitSecs(.3);
-    send_ttl(params,0);
+    send_ttl(params,6);
     
     WaitSecs(.2);
-    send_ttl(params,0);
+    send_ttl(params,6);
 end
 end % end of function

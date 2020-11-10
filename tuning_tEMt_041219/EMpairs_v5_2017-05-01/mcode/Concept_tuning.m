@@ -120,7 +120,8 @@ try
         
         % serial trigger
     elseif strcmp(params.trg,'serial')
-        params.trg_handle = IOPort('OpenSerialPort', 'COM5'); % try out COM3 otherwise, creates trigger handle
+        IOPort('CloseALL');
+        params.trg_handle = IOPort('OpenSerialPort', 'COM3'); % try out COM5 otherwise, creates trigger handle
         params.trg_data = uint8(1); % value that is being sent
         
         % utrecht serial trigger

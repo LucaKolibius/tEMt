@@ -14,7 +14,7 @@ rmpath(genpath(basepathTN))
 
 %% TRY TO SUGGEST A NEW SESSION NUMBER
 %  FIND LAST SUBJECT
-findSbj    = dir([basepathTN,'\params\sub*']); 
+findSbj    = dir([basepathTN,'\params\sub*']);
 [~,idx]    = sort([findSbj.datenum]);
 findSbj    = findSbj(idx);
 
@@ -25,12 +25,12 @@ if isempty(findSbj) % first ever subject
 else
     
     % IF THE NUMBER OF DAYS SINCE THE LAST PATIENT FOLDER IS OVER 6 IT SUGGESTS A NEW PATIENT
-    if now - findSbj(end).datenum >= 6 
+    if now - findSbj(end).datenum >= 6
         suggestSesh = 1;
         
     else
         % FIND LAST SESSION
-        allSesh = dir([findSbj(end).folder, filesep, findSbj(end).name, filesep, 'Session_*']); 
+        allSesh = dir([findSbj(end).folder, filesep, findSbj(end).name, filesep, 'Session_*']);
         [~,idx] = sort([allSesh.datenum]);
         allSesh = allSesh(idx);
         
@@ -51,7 +51,7 @@ if size(suggestSesh,2) == 1; suggestSesh = ['0', suggestSesh]; end
 prompt   = {'Experiment: Tuning (tun) oder EM (em):', 'Trigger (Test oder TTL):','Patienten ID (sub-10XX):', 'Sitzung (XX):', 'Sprache:'};
 dlgtitle = 'Eingabe (1/2)';
 dims     = [1 35];
-definput = {'tun', 'TTL','sub-10XX', suggestSesh, 'german'};
+definput = {'em', 'serial','sub-10XX', suggestSesh, 'german'};
 answer   = inputdlg(prompt,dlgtitle,dims,definput);
 
 %% PARSE-IN INPUT
@@ -72,33 +72,35 @@ lang       = lower(answer{5});
 %% INPUT PROMPT DIFFICULTY
 %  FIND PREVIOUS DIFFICULTY LEVEL IF POSSIBLE
 %  (this could be combined with the suggestSesh part)
-if strcmp(trg, 'debug')
-    diff_level = 4;
-else
+if strcmp(tunEM, 'em')
     
-    try % to retrieve previous difficulty level
-        prevSesh = sesh;
-        prevSesh = str2double(sesh);
-        prevSesh = prevSesh - 1;
-        prevSesh = num2str(prevSesh);
-        if size(prevSesh,2) == 1; prevSesh = ['0', prevSesh]; end
+    if strcmp(trg, 'debug')
+        diff_level = 4;
+    else
         
-        prevParams    = dir([basepathEM,'\params\',patientID,'\Session_',prevSesh, filesep]); % where to save params
-        load([prevParams(end).folder, filesep, prevParams(end).name], 'params');
-        prevDif = num2str(params.diff_level);
-    catch % or just use 20 as a suggestion
-        prevDif = '20';
+        try % to retrieve previous difficulty level
+            prevSesh = sesh;
+            prevSesh = str2double(sesh);
+            prevSesh = prevSesh - 1;
+            prevSesh = num2str(prevSesh);
+            if size(prevSesh,2) == 1; prevSesh = ['0', prevSesh]; end
+            
+            prevParams    = dir([basepathEM,'\params\',patientID,'\Session_',prevSesh, filesep]); % where to save params
+            load([prevParams(end).folder, filesep, prevParams(end).name], 'params');
+            prevDif = num2str(params.diff_level);
+        catch % or just use 20 as a suggestion
+            prevDif = '20';
+        end
+        
+        prompt       = {'Schwierigkeitsgrad (min. 3):'};
+        dlgtitle     = 'Eingabe (2/2)';
+        dims         = [1 35];
+        definput     = {prevDif};
+        answerDiff   = inputdlg(prompt,dlgtitle,dims,definput);
+        
+        diff_level = str2double(answerDiff{1}); % initially should be between 16 and 20
     end
-    
-    prompt       = {'Schwierigkeitsgrad:'};
-    dlgtitle     = 'Eingabe (2/2)';
-    dims         = [1 35];
-    definput     = {prevDif};
-    answerDiff   = inputdlg(prompt,dlgtitle,dims,definput);
-    
-    diff_level = str2double(answerDiff{1}); % initially should be between 16 and 20
 end
-
 %% RUN EM-TASK OR TUNING
 % ONLY POST EM TUNING IS IMPLEMENTED
 
@@ -109,5 +111,5 @@ elseif strcmp(tunEM, 'em') % EPISODIC MEMORY EXPERIMENT
     start_tEMt_exp(basepathEM, trg, patientID, sesh, diff_level, lang);    % input through dialogue box
     
 end
-    
+
 end
