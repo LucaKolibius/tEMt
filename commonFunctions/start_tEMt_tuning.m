@@ -130,9 +130,10 @@ end
 chckLog = dir(params.p2log);
 
 if ~strcmp(trg, 'debug') % we don't create folders for debug runs
-if isempty(chckLog)
-    mkdir(params.p2log);
-else  
+    if isempty(chckLog)
+        mkdir(params.p2log);
+    end
+    
     if strcmp(params.rep, 'n') % new session
         params.fid = fopen([params.p2log,params.data_ID,'_TS',num2str(sesh),'_log_ctune_',params.date,'_',params.tmstp,'.txt'],'w');
     elseif strcmp(params.rep, 'y') % reopen aborted session's logfile
@@ -148,7 +149,6 @@ else
             error('Could not re-open logfile')
         end
     end
-end
 end
 
 %%j.l#
