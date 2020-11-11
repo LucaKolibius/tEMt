@@ -245,6 +245,14 @@ try
         % update difficulty
         params.trl_idx = max(params.trl_idx)+1 : max(params.trl_idx)+(params.diff_level); %increments by difficulty. In tEMt I have to use max(). In the previous version (end) was used. However, here we keep the scrambled trial index of retrieval for crash resistance in the params file. Previously that retrieval trial index did not leave the function.
         
+        % save parameter
+        % otherwise when crashing after a retrieval trial and before an
+        % encoding trial the trl_idx from the previous retrieval session is
+        % used for the next encoding block
+        if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
+            get_clock_time;
+            save([params.savep,params.data_ID,'_',date,'_',ct,'_params_aborted.mat'],'params')%  .. and this is is my crash insurance
+        end
         %% measure time of exp
         st = GetSecs;
         d = (st-params.st)/60;
