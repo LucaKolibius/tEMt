@@ -90,7 +90,8 @@ if ~strcmp(trg, 'debug') % we don't create folders for debug runs
             % find the last aborted session
             x = [];
             for tt = 1:length(fn)
-                x(tt) = datenum(fn(tt).date);
+                %                 x(tt) = datenum(fn(tt).date); % this leads to problems if the operating system is set to German (date: 18-Mrz...) and matlab set to english. matlab then cannot interpret what Mrz stands for)
+                x(tt) = fn(tt).datenum; % I pray that this is also available in earlier Matlab versions. This works at least for R2020b.
             end
             [~,sidx] = sort(x);
             sel = sidx(end);
