@@ -136,7 +136,8 @@ if ~strcmp(trg, 'debug') % we don't open / reopen logfiles for practice runs
         fn2 = dir([params.p2log,params.data_ID,'*txt']);
         x = [];
         for tt = 1:length(fn2)
-            x(tt) = datenum(fn2(tt).date);
+            %             x(tt) = datenum(fn2(tt).date); % see above
+            x(tt) = fn(tt).datenum;
         end
         [~,sidx] = sort(x);
         sel = sidx(end);
