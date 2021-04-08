@@ -87,11 +87,11 @@ function [params] = run_retrieval(params)
         fidx = fidx(randperm(length(fidx)));
         
         %% send out trigger
-        if ~strcmp(params.trg, 'debug')
-            send_ttl(params,params.rettrig); [params.ot(1)] = {num2str(GetSecs)}; % onset of cue - raise pin
-        else
+%         if ~strcmp(params.trg, 'debug')
+%             send_ttl(params,params.rettrig); [params.ot(1)] = {num2str(GetSecs)}; % onset of cue - raise pin
+%         else
             [params.ot(1)] = {num2str(GetSecs)};
-        end
+%         end
         
         %% Draw the background image
         if ~isempty(params.bckimTexture)
@@ -129,9 +129,9 @@ function [params] = run_retrieval(params)
             Priority(0);
         end
         
-        if strcmp(params.trg, 'ttl')
-            send_ttl(params,0); % lower the pin
-        end
+%         if strcmp(params.trg, 'ttl')
+%             send_ttl(params,0); % lower the pin
+%         end
         
         %% Draw text: Do you remember?
         %     [params1.ot(2)] = {num2str(GetSecs)};

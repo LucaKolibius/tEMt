@@ -1,6 +1,6 @@
 function EMexp(params)
 
-try
+% try
     %% add folder with m-files to MATLAB path
     addpath([params.basepath,filesep,'mcode',filesep]);
     
@@ -14,25 +14,25 @@ try
     LoadPsychHID;
     HideCursor;
     
-    %% prep trigger box
-    if strcmp(params.trg, 'serial')
-        IOPort('CloseALL');
-        params.trg_handle = IOPort('OpenSerialPort', 'COM3'); % try out COM3 otherwise, creates trigger handle
-        params.trg_data = uint8(1); % value that is being sent
-    elseif strcmp(params.trg, 'ttl')
-        params.daqID  = DaqDeviceIndex;
-        if isempty(params.daqID)
-            error('trigger box not connected');
-        else
-            err = DaqDConfigPort(params.daqID,[],0);
-            out_ = DaqDOut(params.daqID,0,0); % reset
-        end
-    elseif strcmp(params.trg, 'utrecht')
-        %Trigger output is at 115200
-        params.serial = serial('COM4','BaudRate',115200);
-        fopen(params.serial)
-    elseif strcmp(params.trg, 'debug')
-    end
+%     %% prep trigger box
+%     if strcmp(params.trg, 'serial')
+%         IOPort('CloseALL');
+%         params.trg_handle = IOPort('OpenSerialPort', 'COM3'); % try out COM3 otherwise, creates trigger handle
+%         params.trg_data = uint8(1); % value that is being sent
+%     elseif strcmp(params.trg, 'ttl')
+%         params.daqID  = DaqDeviceIndex;
+%         if isempty(params.daqID)
+%             error('trigger box not connected');
+%         else
+%             err = DaqDConfigPort(params.daqID,[],0);
+%             out_ = DaqDOut(params.daqID,0,0); % reset
+%         end
+%     elseif strcmp(params.trg, 'utrecht')
+%         %Trigger output is at 115200
+%         params.serial = serial('COM4','BaudRate',115200);
+%         fopen(params.serial)
+%     elseif strcmp(params.trg, 'debug')
+%     end
     
     %% setting up the trial structure and response buttons
     [params] = set_up_stimuli(params,'n');   
@@ -104,11 +104,11 @@ try
     end
     
     %% send the start trigger
-    if ~strcmp(params.trg, 'debug')
-        send_start_trigger(params);
-        send_start_trigger(params);
-        send_start_trigger(params);
-    end
+%     if ~strcmp(params.trg, 'debug')
+%         send_start_trigger(params);
+%         send_start_trigger(params);
+%         send_start_trigger(params);
+%     end
     
     %% compute the number of frames
     [params.Enc] = compute_numFrames(params,params.Ed);
@@ -295,21 +295,21 @@ try
     
     return;
     
-catch er
-    
-    %% save the set of final parameters
-    get_clock_time;
-    save([params.savep,params.data_ID,'_',date,'_',ct,'_params_aborted2.mat'],'params');
-    
-    if ~strcmp(params.trg, 'debug') % don't need to sebd crash trigger in debuge mode
-        send_crashTrig(params); end
-    
-    sca;% Clear the screen
-    close all;
-    fclose(params.fid);
-    psychrethrow(psychlasterror)
-    error('program aborted');
-    er.message
-    
-end
+% catch er
+%     
+%     %% save the set of final parameters
+%     get_clock_time;
+%     save([params.savep,params.data_ID,'_',date,'_',ct,'_params_aborted2.mat'],'params');
+%     
+%     if ~strcmp(params.trg, 'debug') % don't need to sebd crash trigger in debuge mode
+%         send_crashTrig(params); end
+%     
+%     sca;% Clear the screen
+%     close all;
+%     fclose(params.fid);
+%     psychrethrow(psychlasterror)
+%     error('program aborted');
+%     er.message
+%     
+% end
 end
