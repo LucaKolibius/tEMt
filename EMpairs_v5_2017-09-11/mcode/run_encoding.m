@@ -28,11 +28,11 @@ for encTrl = params.encTrl : length(params.trl_idx) % this...
     end
     
     %% send out TTL
-%     if ~strcmp(params.trg, 'debug') % if it is not in debug mode it sends a trigger and notes the time for the logfile
-%         send_ttl(params, params.enctrig); [params.ot(1)] = {num2str(GetSecs)}; %onset of cue
-%     else % if it is in debug mode it only notes down the time
+    if ~strcmp(params.trg, 'debug') % if it is not in debug mode it sends a trigger and notes the time for the logfile
+        send_ttl(params, params.enctrig); [params.ot(1)] = {num2str(GetSecs)}; %onset of cue
+    else % if it is in debug mode it only notes down the time
         [params.ot(1)] = {num2str(GetSecs)};
-%     end
+    end
     
     %%
     if ~isempty(params.bckimTexture)
@@ -111,9 +111,9 @@ for encTrl = params.encTrl : length(params.trl_idx) % this...
             vbl = Screen('Flip', params.window, vbl + (params.Enc.waitframes - 0.5) * params.ifi);
             
         end
-%         if strcmp(params.trg, 'ttl')
-%             send_ttl(params,0); %offset of cues
-%         end
+        if strcmp(params.trg, 'ttl')
+            send_ttl(params,0); %offset of cues
+        end
         
         %% Draw the associate image on the screen
         tStart = zeros(1,params.Enc.numFrames(1));

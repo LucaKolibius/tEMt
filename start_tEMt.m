@@ -48,7 +48,7 @@ suggestSesh = num2str(suggestSesh);
 if size(suggestSesh,2) == 1; suggestSesh = ['0', suggestSesh]; end
 
 %% INPUT PROMPT
-prompt   = {'Experiment: Tuning (tun) oder EM (em):', 'Trigger (Test oder TTL):','Patienten ID (sub-10XX):', 'Sitzung (XX):', 'Sprache:'};
+prompt   = {'Experiment: Tuning (tun) oder EM (em):', 'Trigger (Test oder TTL oder Utrecht):','Patienten ID (sub-10XX or sub-20XX):', 'Sitzung/Session (XX):', 'Sprache/Language:'};
 dlgtitle = 'Eingabe (1/2)';
 dims     = [1 35];
 definput = {'em', 'serial','sub-10XX', suggestSesh, 'german'};
@@ -57,7 +57,7 @@ answer   = inputdlg(prompt,dlgtitle,dims,definput);
 %% PARSE-IN INPUT
 tunEM      = lower(answer{1});
 tunEM      = regexprep(tunEM, 'tuning', 'tun'); % if input is "test" change trigger to debug mode
-if ~strcmp(tunEM, 'tun') && ~strcmp(tunEM, 'em'); error('Falsches Experimentkürzel ("tun" oder "em")'); end
+if ~strcmp(tunEM, 'tun') && ~strcmp(tunEM, 'em'); error('Falsches Experimentkï¿½rzel ("tun" oder "em")'); end
 
 trg        = lower(answer{2});
 trg        = regexprep(trg, 'test', 'debug'); % if input is "test" change trigger to debug mode
@@ -92,7 +92,7 @@ if strcmp(tunEM, 'em')
             prevDif = '20';
         end
         
-        prompt       = {'Schwierigkeitsgrad (min. 3):'};
+        prompt       = {'Schwierigkeitsgrad / Difficulty (min. 3):'};
         dlgtitle     = 'Eingabe (2/2)';
         dims         = [1 35];
         definput     = {prevDif};
