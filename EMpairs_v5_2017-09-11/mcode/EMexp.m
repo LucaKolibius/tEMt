@@ -293,10 +293,14 @@ function EMexp(params)
         fclose(params.fid);
     end
     
+    %% DELETE ALL ABORTED PARAMETER FILES
+    delete([params.savep, params.data_ID, '*_params_aborted.mat'])
+    
     return;
     
-% catch er
-%     
+    
+    % catch er
+    %
 %     %% save the set of final parameters
 %     get_clock_time;
 %     save([params.savep,params.data_ID,'_',date,'_',ct,'_params_aborted2.mat'],'params');
