@@ -224,6 +224,12 @@ try
     
     %% END
     % Clear the screen
+    if ~strcmp(params.trg, 'debug') % we don't create folders for debug runs
+        create_logfile_timestamp
+        save([params.p2params,params.data_ID,params.date,'_',tmstp,'_tuning_params_completed.mat'],'params'); % params.tmstp will be from the experiment start
+        delete([params.p2params, '*_tuning_params_aborted.mat'])
+    end
+    
     Screen('CloseAll');
     sca;
     close all;

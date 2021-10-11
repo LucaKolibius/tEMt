@@ -280,6 +280,8 @@ try
     
     if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
         save([params.savep, params.data_ID, '_', date, '_', ct, '_params_completed.mat'],'params');
+        
+        delete([params.savep, params.data_ID, '*_params_aborted.mat']) % DELETE ALL ABORTED PARAMETER FILES
     end
     
     %% END
@@ -293,8 +295,6 @@ try
         fclose(params.fid);
     end
     
-    %% DELETE ALL ABORTED PARAMETER FILES
-    delete([params.savep, params.data_ID, '*_params_aborted.mat'])
     
     return;
     
@@ -302,11 +302,13 @@ try
     catch er
     
     %% save the set of final parameters
-    get_clock_time;
-    save([params.savep,params.data_ID,'_',date,'_',ct,'_params_aborted2.mat'],'params');
     
     if ~strcmp(params.trg, 'debug') % don't need to sebd crash trigger in debuge mode
-        send_crashTrig(params); end
+        get_clock_time;
+        save([params.savep,params.data_ID,'_',date,'_',ct,'_params_aborted2.mat'],'params');
+        
+        send_crashTrig(params);
+    end
     
     sca;% Clear the screen
     close all;
