@@ -111,7 +111,8 @@ else
     if ~isempty(fn) % if there is a partial session
         x = [];
         for tt = 1:length(fn)
-            x(tt) = datenum(fn(tt).date);
+            %             x(tt) = datenum(fn(tt).date);
+            x(tt) = fn(tt).datenum;
         end
         [~,sidx] = sort(x);
         sel = sidx(end);
@@ -140,7 +141,8 @@ if ~strcmp(trg, 'debug') % we don't create folders for debug runs
         fn2 = dir([params.p2log,'*txt']);
         x = [];
         for tt = 1:length(fn2)
-            x(tt) = datenum(fn2(tt).date);
+            %             x(tt) = datenum(fn2(tt).date);
+            x(tt) = fn(tt).datenum;
         end
         [~,sidx] = sort(x);
         sel = sidx(end);
