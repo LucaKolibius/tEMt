@@ -3,7 +3,18 @@
 % patientID is a string ('sub-1013')
 function prepNextEMsesh(basepath, patientID, sesh)
 disp('Prepping stimulus material for upcoming session.')
-sourceFolder = [basepath, '\image_data\EMtune\formatted_180-180\stimMat\']; % all 359 possible stimuli that can be used in the task minus the ones used in the practice run
+
+if strcmp(sesh, '02')
+    sourceFolder = [basepath, '\image_data\EMtune\formatted_180-180\stimMat\']; % all 359 possible stimuli that can be used in the task minus the ones used in the practice run
+else
+    prevSesh = str2double(sesh);
+    prevSesh = prevSesh - 1;
+    prevSesh = num2str(prevSesh);
+    
+    if size(prevSesh,2) == 1; prevSesh = ['0', prevSesh]; end
+    
+    sourceFolder = [basepath, '\image_data\EMtune\formatted_180-180\subjectSpecific\', patientID, filesep, 'sesh', prevSesh, filesep];
+end
 
 myStim = loadLogs_tEMt_em(basepath, patientID, sesh); % used stimuli
 
