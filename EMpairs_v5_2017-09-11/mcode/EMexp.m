@@ -242,6 +242,9 @@ try
         if params.diff_level <=4; params.diff_level =4;end
         %if params.diff_level >=24; params.diff_level =24;end;
         
+        %% 31.05.22 how many trials have we done?
+        doneTrl = params.trl_idx(end);
+        
         % update difficulty
         params.trl_idx = max(params.trl_idx)+1 : max(params.trl_idx)+(params.diff_level); %increments by difficulty. In tEMt I have to use max(). In the previous version (end) was used. However, here we keep the scrambled trial index of retrieval for crash resistance in the params file. Previously that retrieval trial index did not leave the function.
         
@@ -253,12 +256,27 @@ try
             get_clock_time;
             save([params.savep,params.data_ID,'_',date,'_',ct,'_params_aborted.mat'],'params')%  .. and this is is my crash insurance
         end
+        
         %% measure time of exp
+% % %         I think I have tPer (cn time per image) calculated somewhere
+% on my own laptop
+% % %         estTunTime = doneTrl * 2 * tPer;
+% % %         estTotTime = estTunTime + d;
+% % %         
+% % %         if d > params.expDur % set to 30mins
+% % %             endExp = 1;
+% % %         elseif estTotTime > params.expDur
+% % %             endExp = 1;
+% % %         end
+        
+        
         st = GetSecs;
-        d = (st-params.st)/60;
-        if d > params.expDur
+        d = (st-params.st)/60; % how many minutes have passed since the initial session start?
+        if d > params.expDur % set to 30mins
             endExp = 1;
         end
+        
+        %% 
         
         %% break trial
         if endExp ~=1

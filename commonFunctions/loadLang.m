@@ -114,4 +114,47 @@ elseif strcmp(lang, 'dutch')
     params.break.a = 'Yay, je bent klaar met dit blok. Neem een korte pauze ...';
     params.break.b = 'Druk een pijl knop om door te gaan.';
     params.complete = 'Je bent klaar met het experiment! Heel erg bedankt voor het meedoen!';
+    
+elseif strcmp(lang, 'slow')
+    
+        params.instructions1.a = 'Predstavljajte si zgodbo, ki vsebuje dve naslednji sliki.';
+    params.instructions1.b = 'Ko se boste zapomnili vsako zgodbo, vas bodo vprasali';
+    params.instructions1.c = 'oceniti, kako verjetna je.';
+    params.instructions1.d = 'Pritisnite puscicno tipko za zacetek.';
+    
+    params.encoding.a = 'Verjetno';
+    params.encoding.b = 'Neverjetno';
+    
+    params.instructions2.a = 'Pri naslednji nalogi boste videli razlicne stevilke.';
+    params.instructions2.b = 'Ce je stevilo liho, pritisnite puscico levo.';
+    params.instructions2.c = 'Ce je stevilo sodo, pritisnite puscico desno.';
+    params.instructions2.d = 'Pritisnite puscicno tipko za zacetek.';
+    
+    params.distr.odd = 'Cuden'; 
+    params.distr.even = 'Celo'; 
+    
+    params.instructions3.a = 'Med naslednjim opravilom boste videli eno sliko.';
+    params.instructions3.b = 'Prosimo, poskusite si zapomniti svojo zgodbo';
+    params.instructions3.c = 'in priklicite manjkajoco sliko (izberite z "-").';
+    params.instructions3.d = 'Pritisnite puscicno tipko za zacetek.';
+    
+    params.retrieval.a = 'Se spomnite podobe, ki sodi sem?';
+    params.retrieval.b = 'Ne (levo) / Da (desno)';
+    
+    params.break.a = 'Blok dokoncan. Vzemite si kratek odmor ...';
+    params.break.b = 'Pritisnite puscicno tipko za nadaljevanje.';
+    params.complete = 'Naloga koncana. Hvala vam!';
+    
+    % tuning
+    params.tunInstr1 = 'Vzemite si trenutek in preberite spodnja navodila.';
+    params.tunInstr2 = 'V naslednji nalogi boste videli razlicne slike.';
+    params.tunInstr3 = 'Navedite kategorijo vsake slike.';
+    params.tunInstr4 = 'Ce slika spada v kategorijo FACE, pritisnite puscicno tipko LEVO.';
+    params.tunInstr5 = 'Ce slika spada v kategorijo ZIVALI, pritisnite puscicno tipko DOL.';
+    params.tunInstr6 = 'Ce slika spada v kategorijo MESTO, pritisnite puscicno tipko DESNO.';
+    params.tunInstr7 = 'Prosimo, da vas pogled ostane na sredini zaslona.';
+    params.tunInstr8 = 'Pritisnite puscicno tipko, da zacnete z nalogo.';
+    params.tunInstrBreak1 = '% dokoncane naloge. Vzemite si kratek odmor ...';
+    params.tunInstrBreak2 = 'Pritisnite puscicno tipko za nadaljevanje.';
+
 end

@@ -1,10 +1,10 @@
 % Psychophysicstoolbox need to be setup properly
 function start_tEMt
-addpath('X:\Luca\tEMt\commonFunctions')
+addpath('\\analyse4.psy.gla.ac.uk\project0309\Luca\tEMt\commonFunctions')
 
 %% BASEPATH: THIS NEEDS TO BE ADAPTED
-basepathEM = [ 'X:\Luca\tEMt\EMpairs_v5_2017-09-11' ]; % substitute with your experiment path
-basepathTN = [ 'X:\Luca\tEMt\tuning_tEMt_041219\EMpairs_v5_2017-05-01'];
+basepathEM = [ '\\analyse4.psy.gla.ac.uk\project0309\Luca\tEMt\EMpairs_v5_2017-09-11' ]; % substitute with your experiment path
+basepathTN = [ '\\analyse4.psy.gla.ac.uk\project0309\Luca\tEMt\tuning_tEMt_041219\EMpairs_v5_2017-05-01'];
 
 % since EM and tuning were created from the same experimental code, some
 % functions overlap. If we run the tuning task, we don't want any unedited / unaltered tuning
@@ -48,7 +48,7 @@ suggestSesh = num2str(suggestSesh);
 if size(suggestSesh,2) == 1; suggestSesh = ['0', suggestSesh]; end
 
 %% INPUT PROMPT
-prompt   = {'Experiment: Tuning (tun) oder EM (em):', 'Trigger (Test oder TTL oder Utrecht):','Patienten ID (sub-10XX or sub-20XX):', 'Sitzung/Session (XX):', 'Sprache/Language:'};
+prompt   = {'Experiment: Tuning (tun) oder EM (em):', 'Trigger (Test oder TTL oder Utrecht):','Patienten ID (sub-10XX or sub-20XX):', 'Sitzung/Session (XX):', 'Sprache/Language (english, german, dutch, slow):'};
 dlgtitle = 'Eingabe (1/2)';
 dims     = [1 35];
 definput = {'em', 'serial','sub-10XX', suggestSesh, 'german'};
@@ -57,7 +57,7 @@ answer   = inputdlg(prompt,dlgtitle,dims,definput);
 %% PARSE-IN INPUT
 tunEM      = lower(answer{1});
 tunEM      = regexprep(tunEM, 'tuning', 'tun'); % if input is "test" change trigger to debug mode
-if ~strcmp(tunEM, 'tun') && ~strcmp(tunEM, 'em'); error('Falsches Experimentk�rzel ("tun" oder "em")'); end
+if ~strcmp(tunEM, 'tun') && ~strcmp(tunEM, 'em'); error('Falsches Experimentkuerzel ("tun" oder "em")'); end
 
 trg        = lower(answer{2});
 trg        = regexprep(trg, 'test', 'debug'); % if input is "test" change trigger to debug mode
