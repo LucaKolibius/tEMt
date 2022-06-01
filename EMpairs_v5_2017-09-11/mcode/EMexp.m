@@ -258,26 +258,27 @@ try
         end
         
         %% measure time of exp
-% % %         I think I have tPer (cn time per image) calculated somewhere
-% on my own laptop
-% % %         estTunTime = doneTrl * 2 * tPer;
-% % %         estTotTime = estTunTime + d;
-% % %         
-% % %         if d > params.expDur % set to 30mins
-% % %             endExp = 1;
-% % %         elseif estTotTime > params.expDur
-% % %             endExp = 1;
-% % %         end
-        
-        
+        % NEW: THIS WILL TAKE INTO CONSIDERATIONS PATIENTS THAT HAVE A LOT OF
+        % MEMORY TRIALS, WHICH LEADS TO SUPER LONG TUNING PARTS AFTER THE 30MIN
+        % MEMORY PART
         st = GetSecs;
-        d = (st-params.st)/60; % how many minutes have passed since the initial session start?
+        d = (st-params.st)/60; % how many minutes have passed since the initial session start? this will lead to problems if taking longer breaks between sessions. in this case a new session should be initiated anyway (but do visual tuning before!!)
+        
+        tPer = 1.91; % time in seconds per image
+        estTunTime = doneTrl * 2 * tPer * 6; % how many trials, each trial has 2 images, how long each image takes, how many time each image is shown
+        estTotTime = estTunTime + d;
+        
         if d > params.expDur % set to 30mins
+            endExp = 1;
+        elseif estTotTime > params.expDur
             endExp = 1;
         end
         
-        %% 
-        
+        % OLD
+        % %         if d > params.expDur % set to 30mins
+        % %             endExp = 1;
+        % %         end
+                
         %% break trial
         if endExp ~=1
             if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
