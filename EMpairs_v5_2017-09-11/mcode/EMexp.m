@@ -265,12 +265,12 @@ try
         d = (st-params.st)/60; % how many minutes have passed since the initial session start? this will lead to problems if taking longer breaks between sessions. in this case a new session should be initiated anyway (but do visual tuning before!!)
         
         tPer = 1.91; % time in seconds per image
-        estTunTime = doneTrl * 2 * tPer * 6; % how many trials, each trial has 2 images, how long each image takes, how many time each image is shown
+        estTunTime = doneTrl * 2 * tPer * 6 / 60; % how many trials, each trial has 2 images, how long each image takes, how many time each image is shown
         estTotTime = estTunTime + d;
         
         if d > params.expDur % set to 30mins
             endExp = 1;
-        elseif estTotTime > params.expDur
+        elseif estTotTime > params.expDur + 15 % 45 min total with CN
             endExp = 1;
         end
         
