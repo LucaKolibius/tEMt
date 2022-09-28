@@ -1,4 +1,4 @@
-function [params] = run_retrieval(params)
+function [params] = run_retrieval(params, retBlock)
 %% intialize
 %To Do: -measure the reaction time of the first button press
 %22/06/16 - FRO: fixed the selection of the foils by balancing faces and
@@ -262,7 +262,7 @@ function [params] = run_retrieval(params)
                     
                     %% if the patient just moved to select another image, get the next response. dont reset rt.
                     %                     tStart4 = GetSecs;
-                    [response2,rt2] = get_response(1,tarFoil,params.btns);
+                    [response2,rt2] = get_response(1, tarFoil, params.btns);
                     KbReleaseWait;
                     GpWait(params.btns);
                     
@@ -295,10 +295,10 @@ function [params] = run_retrieval(params)
                 
             end
             
-            [params.perf{params.trl_idx(retTrl)}] = compute_accuracy(params.CM(retTrl,:)); % writes 1 for a hit, 0 for miss
+            [params.perf{params.trl_idx(retTrl), retBlock}] = compute_accuracy(params.CM(retTrl,:)); % writes 1 for a hit, 0 for miss
             
         elseif response1 == 0 % if indicating patient does NOT remember
-            [params.perf{params.trl_idx(retTrl)}] = compute_accuracy(zeros(1,2));
+            [params.perf{params.trl_idx(retTrl), retBlock}] = compute_accuracy(zeros(1,2));
             params.RT = [params.RT 1e6];%add 2x NaNs because of the missing RTs
         end
         %     end
@@ -310,7 +310,7 @@ function [params] = run_retrieval(params)
         [params.ot(3)] = {num2str(qFlip)};                           % when questions comes up ~2s after cue
         [params.ot(4)] = {num2str(tarFoil)};                         % when showing the stimuli (targets and foils)
         [params.ot(5)] = {num2str(tarFoil + rt2)};                   % when responding to matrix of target/distractors
-        [out] = create_retrieval_output(params, params.trl_idx(retTrl));  % c is a counter for trials within that block
+        [out] = create_retrieval_output(params, params.trl_idx(retTrl), retBlock);  % c is a counter for trials within that block
 
         if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
             write_output2log(params,out);
@@ -320,7 +320,7 @@ function [params] = run_retrieval(params)
         
     end
     params.retTrl = 1;
-    params.flag2 = 0;
+%     params.flag2 = 0; % is reset now after the function run_retrieval
     params.permRet = 1; % for the next retrieval block, permutate trial order again!
     get_clock_time;
     

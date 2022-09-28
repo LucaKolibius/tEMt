@@ -1,10 +1,14 @@
 % Psychophysicstoolbox need to be setup properly
 function start_tEMt
-addpath('\\analyse4.psy.gla.ac.uk\project0309\Luca\tEMt\commonFunctions')
+% addpath('\\analyse4.psy.gla.ac.uk\project0309\Luca\tEMt\commonFunctions')
+addpath('X:\Luca\tEMt\commonFunctions');
 
 %% BASEPATH: THIS NEEDS TO BE ADAPTED
-basepathEM = [ '\\analyse4.psy.gla.ac.uk\project0309\Luca\tEMt\EMpairs_v5_2017-09-11' ]; % substitute with your experiment path
-basepathTN = [ '\\analyse4.psy.gla.ac.uk\project0309\Luca\tEMt\tuning_tEMt_041219\EMpairs_v5_2017-05-01'];
+% basepathEM = [ '\\analyse4.psy.gla.ac.uk\project0309\Luca\tEMt\EMpairs_v5_2017-09-11' ]; % substitute with your experiment path
+% basepathTN = [ '\\analyse4.psy.gla.ac.uk\project0309\Luca\tEMt\tuning_tEMt_041219\EMpairs_v5_2017-05-01'];
+basepathEM = [ 'X:\Luca\tEMt\EMpairs_v5_2017-09-11' ]; % substitute with your experiment path
+basepathTN = [ 'X:\Luca\tEMt\tuning_tEMt_041219\EMpairs_v5_2017-05-01'];
+
 
 % since EM and tuning were created from the same experimental code, some
 % functions overlap. If we run the tuning task, we don't want any unedited / unaltered tuning

@@ -35,7 +35,7 @@ try
     end
     
     %% setting up the trial structure and response buttons
-    [params] = set_up_stimuli(params,'n');   
+    [params] = set_up_stimuli(params,'n');
     
     %% implement non-preferred stimuli
     [params.btns] = SetExpButtons;
@@ -78,7 +78,7 @@ try
     %% intialize performance loging
     if ~isfield(params, 'c')
         params.c =  0; %params.start_idx-1;
-        params.perf = cell(size(params.stim_mat.seq,2),1);
+        params.perf = cell(size(params.stim_mat.seq,2),3); % number of all possible trials X 3 retrievals
     else
     end
     
@@ -133,11 +133,13 @@ try
         % encoding and switch flag1 to "0". Then we run retrieval and
         % switch flag2 to "0". Then we repeat the while loop and switch
         % flag1 and flag2 back to "1".
-        if isfield(params,'flag1') && isfield(params,'flag2')
-            if ( params.flag1 ~=1 ) && ( params.flag2 ~=1 ) % encoding and retrieval block both done! reset flags
+        if isfield(params,'flag0') && isfield(params,'flag1') && isfield(params,'flag2') && isfield(params,'flag3')
+            if ( params.flag0 ~=1 ) && ( params.flag1 ~=1 ) && ( params.flag2 ~=1 ) && ( params.flag3 ~=1 ) % encoding and retrieval block both done! reset flags
                 
+                params.flag0 = 1;
                 params.flag1 = 1;
                 params.flag2 = 1;
+                params.flag3 = 1;
                 
                 %% count blocks
                 params.c = params.c+1;
@@ -149,9 +151,11 @@ try
                 end
                 
             end
-        else % if flag1 and flag2 do not exist yet, create them here.
+        else % if flag0 to flag3 do not exist yet, create them here.
+            params.flag0 = 1;
             params.flag1 = 1;
             params.flag2 = 1;
+            params.flag3 = 1;
             
             %% count blocks
             params.c = params.c+1;
@@ -165,7 +169,7 @@ try
         end
         
         %%
-        if params.flag1 == 1
+        if params.flag0 == 1
             %% Instructions Encoding
             if params.c == 1
                 instructions1(params);
@@ -177,7 +181,7 @@ try
             
             %% Encoding task
             [params] = run_encoding(params);
-                        
+            
             %% Instruction distractor task
             % odd/even number judgement
             if params.c ==1
@@ -189,34 +193,92 @@ try
             
         end
         
-        %%
-        if params.flag2 ==1
+        %% RETRIEVAL #1
+        if params.flag1 ==1
             %% Instruction Retrieval task
             if params.c ==1
                 instructions3(params);
             end
             
             if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
-                write_output2log(params,['RET',num2str(params.c)]);
+                write_output2log(params,['RET1-B',num2str(params.c)]);
             end
             
             %% Retrieval task
-            [params] = run_retrieval(params);
+            retBlock = 1;
+            [params] = run_retrieval(params, retBlock);
+            params.flag1 = 0; % previously within run_retrieval
+            
             Priority(0);
             
+            disp('Retrieval 1')
             disp('params.stim_mat.seq: ');
             disp(params.stim_mat.seq);
             disp('params.trl_idx: ');
             disp(params.trl_idx);
+            
+            %% Distractor task
+            [~ ,~] = distracter_task(params, 15);
+        end
+        
+        %% RETRIEVAL #2
+        if params.flag2 == 1
+            if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
+                write_output2log(params,['RET2-B',num2str(params.c)]);
+            end
+            
+            %% Retrieval task
+            retBlock = 2;
+            [params] = run_retrieval(params, retBlock);
+            params.flag2 = 0;
+            Priority(0);
+            
+            disp('Retrieval 2')
+            disp('params.stim_mat.seq: ');
+            disp(params.stim_mat.seq);
+            disp('params.trl_idx: ');
+            disp(params.trl_idx);
+            
+            %% Distractor task
+            [~ ,~] = distracter_task(params, 15);
+            
+        end
+        
+        %% RETRIEVAL #3
+        if params.flag3 == 1
+            if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
+                write_output2log(params,['RET3-B',num2str(params.c)]);
+            end
+            
+            %% Retrieval task
+            
+            retBlock = 3;
+            [params] = run_retrieval(params, retBlock);
+            params.flag3 = 0;
+            Priority(0);
+            
+            disp('Retrieval 3')
+            disp('params.stim_mat.seq: ');
+            disp(params.stim_mat.seq);
+            disp('params.trl_idx: ');
+            disp(params.trl_idx);
+            
+            %% Distractor task
+            [~ ,~] = distracter_task(params, 15);
+            
         end
         
         %% adaptive task-difficulty
-        a = zeros(1,length(params.trl_idx));
-        for kt = 1:length(params.trl_idx)
-            a(kt) = params.perf{params.trl_idx(kt)}.H; % 1 and 0?
+        a = zeros(length(params.trl_idx),3);
+        for trlIdx = 1:length(params.trl_idx)
+            for rep = 1:3
+                a(trlIdx,rep) = params.perf{params.trl_idx(trlIdx),rep}.H; % 1 and 0?
+            end
         end
         
-        a = nansum(a)/length(a);
+        % at this point 'a' corresponds with the last retrieval order and not
+        % the encoding order. But it doesn't matter.
+        a = nansum(a(:))/length(a(:)); % take the overall mean memory performance over all trials in the block and all three retrievals
         
         a = (a-1/4)/(1-(1/4));% hit rate corrected for guesses
         if isnan(a)
@@ -278,7 +340,7 @@ try
         % %         if d > params.expDur % set to 30mins
         % %             endExp = 1;
         % %         end
-                
+        
         %% break trial
         if endExp ~=1
             if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
@@ -318,10 +380,11 @@ try
     return;
     
     
-    catch er
+catch er
+    
+    fprintf(2,'There was an error in line %s! The message was:\n%s', num2str([er.stack.line]), er.message);
     
     %% save the set of final parameters
-    
     if ~strcmp(params.trg, 'debug') % don't need to sebd crash trigger in debuge mode
         get_clock_time;
         save([params.savep,params.data_ID,'_',date,'_',ct,'_params_aborted2.mat'],'params');
@@ -331,10 +394,9 @@ try
     
     sca;% Clear the screen
     close all;
-    fclose(params.fid);
     psychrethrow(psychlasterror)
+    fclose(params.fid);
     error('program aborted');
-    er.message
     
 end
 end

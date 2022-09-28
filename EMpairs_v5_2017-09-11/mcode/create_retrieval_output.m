@@ -1,7 +1,7 @@
-function [out] = create_retrieval_output(params,trl)
+function [out] = create_retrieval_output(params,trl, retBlock)
 %% log response to txt file;
 RT = params.RT;
-x =params.perf{trl}.P';x=x(:)';
+x =params.perf{trl, retBlock}.P';x=x(:)';
 
 %block ntrials TRL_BEG TRL_END RT AC OT1 OT2 OT3 
 txt = [num2str(trl),'\t',params.ret_id,'\t'];

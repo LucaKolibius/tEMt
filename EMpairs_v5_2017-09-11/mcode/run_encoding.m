@@ -191,7 +191,8 @@ for encTrl = params.encTrl : length(params.trl_idx) % this...
     
 end
 params.encTrl = 1; % reset trial counter for next block to begin at 1
-params.flag1 = 0; % set flag to 0 indicating finished encoding block
+% params.flag1 = 0; % set flag to 0 indicating finished encoding block
+params.flag0 = 0; % encoding is now flag0
 get_clock_time; % saving params
 
 if ~strcmp(params.trg, 'debug') % don't need to save in debuge mode
